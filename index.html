@@ -1,0 +1,1231 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>不良研究社网站-成人向独立研究内容索引</title>
+<meta name="description" content="不良研究社网站是面向成年读者的独立研究内容索引，收录亚文化观察、独立影像、冷门出版物与深夜话题的长文与笔记，按主题归档并标注来源与核查日期。">
+<meta name="keywords" content="不良研究社网站">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2314130f'/%3E%3Ccircle cx='32' cy='32' r='17' fill='none' stroke='%23e2603c' stroke-width='3'/%3E%3Cpath d='M32 15v34M15 32h34' stroke='%23f0c24b' stroke-width='2.4'/%3E%3C/svg%3E">
+<style>
+:root{
+  --bg:#0f0e0c;
+  --bg-soft:#171512;
+  --panel:#1d1a16;
+  --panel-2:#241f19;
+  --line:#3a332a;
+  --line-soft:#2b251e;
+  --ink:#efe7da;
+  --ink-2:#c4b8a5;
+  --ink-3:#8f8577;
+  --accent:#e2603c;
+  --accent-2:#f0c24b;
+  --teal:#6fb3a0;
+  --radius:10px;
+  --radius-lg:16px;
+  --shadow:0 10px 28px rgba(0,0,0,.42);
+  --font:"Noto Serif SC","Songti SC","Source Han Serif SC",Georgia,"Times New Roman",serif;
+  --font-ui:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,sans-serif;
+  --sp:16px;
+  --head-h:64px;
+  --notice-h:38px;
+  --sticky:calc(var(--head-h) + var(--notice-h));
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--ink);
+  font-family:var(--font-ui);
+  font-size:16px;
+  line-height:1.8;
+  -webkit-font-smoothing:antialiased;
+}
+img{max-width:100%;height:auto;display:block}
+a{color:var(--accent-2);text-decoration:none}
+a:hover{text-decoration:underline}
+:focus-visible{outline:2px solid var(--accent-2);outline-offset:3px;border-radius:4px}
+h1,h2,h3,h4{font-family:var(--font);font-weight:700;line-height:1.35;margin:0}
+p{margin:.6em 0}
+ul,ol{margin:.6em 0;padding-left:1.3em}
+li{margin:.3em 0}
+section[id],div[id]{scroll-margin-top:calc(var(--sticky) + 12px)}
+
+/* 公告条 + 页头 */
+.notice-bar{
+  position:sticky;top:0;z-index:60;
+  height:var(--notice-h);
+  display:flex;align-items:center;gap:10px;
+  background:linear-gradient(90deg,#241109,#2c1a10 55%,#241109);
+  border-bottom:1px solid #45301f;
+  font-size:13px;color:#e9d3b7;
+  padding:0 14px;overflow:hidden;white-space:nowrap;
+}
+.notice-bar strong{color:var(--accent-2);font-weight:700}
+.notice-bar .dot{width:7px;height:7px;border-radius:50%;background:var(--accent);flex:0 0 auto}
+.notice-bar .n-text{overflow:hidden;text-overflow:ellipsis}
+.site-header{
+  position:sticky;top:var(--notice-h);z-index:55;
+  background:rgba(15,14,12,.96);
+  backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--line);
+}
+.header-inner{
+  max-width:1240px;margin:0 auto;padding:0 16px;
+  height:var(--head-h);
+  display:flex;align-items:center;gap:14px;
+}
+.brand{display:flex;align-items:center;gap:10px;flex:0 0 auto}
+.brand-mark{width:34px;height:34px;flex:0 0 auto}
+.brand-text{font-family:var(--font);font-size:18px;letter-spacing:.5px;color:var(--ink);white-space:nowrap}
+.brand-text b{color:var(--accent);font-weight:700}
+.main-nav{margin-left:6px;flex:1 1 auto;min-width:0}
+.main-nav ul{display:flex;gap:2px;list-style:none;margin:0;padding:0;overflow-x:auto;scrollbar-width:none}
+.main-nav ul::-webkit-scrollbar{display:none}
+.main-nav a{
+  display:block;padding:6px 10px;color:var(--ink-2);font-size:14px;
+  border-radius:6px;white-space:nowrap;text-decoration:none;
+  border-bottom:2px solid transparent;
+}
+.main-nav a:hover{color:var(--ink);background:var(--panel-2);text-decoration:none}
+.main-nav a[aria-current="true"]{color:var(--accent-2);border-bottom-color:var(--accent)}
+.header-tools{display:flex;align-items:center;gap:8px;flex:0 0 auto}
+.search-box{position:relative}
+.search-box input{
+  width:168px;background:var(--panel);border:1px solid var(--line);
+  color:var(--ink);border-radius:999px;padding:7px 12px;font-size:13px;font-family:var(--font-ui);
+}
+.search-box input::placeholder{color:var(--ink-3)}
+.search-box input:focus{border-color:var(--accent-2);outline:none}
+.search-result{
+  position:absolute;top:calc(100% + 8px);right:0;width:290px;max-width:72vw;
+  background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);
+  box-shadow:var(--shadow);padding:8px;display:none;z-index:70;
+  max-height:320px;overflow:auto;
+}
+.search-result.open{display:block}
+.search-result a{display:block;padding:7px 9px;border-radius:6px;color:var(--ink);font-size:13.5px;text-decoration:none}
+.search-result a:hover{background:var(--panel-2)}
+.search-result .sr-empty{color:var(--ink-3);font-size:13px;padding:8px 9px;line-height:1.6}
+.menu-btn{
+  display:none;align-items:center;justify-content:center;gap:6px;
+  background:var(--panel);border:1px solid var(--line);color:var(--ink);
+  border-radius:8px;padding:7px 11px;font-size:13px;cursor:pointer;font-family:var(--font-ui);
+}
+.menu-btn svg{width:16px;height:16px}
+
+/* 布局 */
+.wrap{max-width:1240px;margin:0 auto;padding:0 16px}
+.layout{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:32px;align-items:start;padding:34px 0 10px}
+.main-col{min-width:0}
+.side-col{position:sticky;top:calc(var(--sticky) + 16px);min-width:0}
+.side-card{background:var(--panel);border:1px solid var(--line-soft);border-radius:var(--radius-lg);padding:16px 16px 18px;margin-bottom:18px}
+.side-card h2,.side-card h3{font-size:15px;margin-bottom:10px;color:var(--ink)}
+.side-nav{list-style:none;margin:0;padding:0;font-size:14px}
+.side-nav a{
+  display:block;padding:6px 10px;border-radius:6px;color:var(--ink-2);
+  border-left:2px solid transparent;text-decoration:none;
+}
+.side-nav a:hover{color:var(--ink);background:var(--panel-2);text-decoration:none}
+.side-nav a.active{color:var(--accent-2);border-left-color:var(--accent);background:var(--panel-2)}
+
+/* 首屏 */
+.hero{
+  position:relative;overflow:hidden;
+  border:1px solid var(--line);
+  border-radius:var(--radius-lg);
+  background:
+    radial-gradient(120% 130% at 88% 0%,rgba(226,96,60,.20),transparent 58%),
+    radial-gradient(90% 110% at 4% 100%,rgba(111,179,160,.14),transparent 60%),
+    linear-gradient(180deg,#1b1813,#141210);
+  padding:30px 26px 26px;
+}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:26px;align-items:center}
+.hero-kicker{
+  display:inline-flex;align-items:center;gap:8px;font-size:12.5px;letter-spacing:1.6px;
+  color:var(--accent-2);text-transform:uppercase;border:1px solid #4a3a25;border-radius:999px;
+  padding:3px 12px;background:rgba(240,194,75,.06);
+}
+.hero h1{font-size:clamp(26px,4.4vw,42px);margin:14px 0 10px;letter-spacing:1px}
+.hero h1 em{font-style:normal;color:var(--accent)}
+.hero-lead{color:var(--ink-2);font-size:15.5px;max-width:38em;margin:0 0 18px}
+.hero-actions{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:18px}
+.btn{
+  display:inline-flex;align-items:center;gap:7px;padding:9px 17px;border-radius:999px;
+  font-size:14.5px;font-weight:600;text-decoration:none;transition:transform .18s ease,background .18s ease;
+  border:1px solid transparent;
+}
+.btn:hover{text-decoration:none;transform:translateY(-2px)}
+.btn-primary{background:var(--accent);color:#fff5ee;border-color:#f07a56}
+.btn-primary:hover{background:#ec6f4a}
+.btn-ghost{background:rgba(255,255,255,.03);color:var(--ink);border-color:var(--line)}
+.btn-ghost:hover{background:rgba(255,255,255,.07)}
+.hero-stats{display:flex;flex-wrap:wrap;gap:0;border-top:1px dashed var(--line);padding-top:14px}
+.hero-stats div{padding-right:22px;margin-right:22px;border-right:1px solid var(--line-soft)}
+.hero-stats div:last-child{border-right:0;margin-right:0}
+.hero-stats b{display:block;font-family:var(--font);font-size:20px;color:var(--accent-2)}
+.hero-stats span{font-size:12.5px;color:var(--ink-3)}
+.hero-art{position:relative;min-height:230px;display:flex;align-items:center;justify-content:center}
+.hero-art svg{width:100%;height:auto;max-width:340px}
+.hero-art .tag-float{
+  position:absolute;font-size:11.5px;color:var(--ink-2);background:rgba(15,14,12,.82);
+  border:1px solid var(--line);border-radius:999px;padding:3px 10px;white-space:nowrap;
+}
+
+/* 通用板块 */
+.block{margin:38px 0 0}
+.block-head{display:flex;align-items:baseline;justify-content:space-between;gap:14px;flex-wrap:wrap;margin-bottom:6px}
+.block-head h2{font-size:clamp(20px,2.4vw,25px)}
+.block-head h2 .idx{color:var(--accent);font-family:var(--font-ui);font-size:13px;letter-spacing:1px;margin-right:8px;vertical-align:2px}
+.block-sub{color:var(--ink-3);font-size:13.5px;margin:0 0 16px}
+.chip-link{font-size:13px;color:var(--accent-2);white-space:nowrap}
+
+/* 分类标签 */
+.tag-index{display:flex;flex-wrap:wrap;gap:9px}
+.tag-index a{
+  display:inline-flex;align-items:center;gap:7px;
+  background:var(--panel);border:1px solid var(--line);border-radius:999px;
+  padding:7px 15px;font-size:14px;color:var(--ink);text-decoration:none;
+  transition:border-color .18s ease,transform .18s ease;
+}
+.tag-index a:hover{border-color:var(--accent);transform:translateY(-2px);text-decoration:none}
+.tag-index a span{font-size:11.5px;color:var(--ink-3)}
+
+/* 网格卡片 */
+.cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.card{
+  background:var(--panel);border:1px solid var(--line-soft);border-radius:var(--radius);
+  padding:16px;display:flex;flex-direction:column;gap:8px;
+  transition:transform .18s ease,border-color .18s ease;
+}
+.card:hover{transform:translateY(-3px);border-color:#4b4034}
+.card .meta{font-size:12px;color:var(--ink-3);display:flex;gap:8px;flex-wrap:wrap}
+.card .meta i{font-style:normal;color:var(--accent-2)}
+.card h3{font-size:16.5px;line-height:1.5}
+.card h3 a{color:var(--ink);text-decoration:none}
+.card h3 a:hover{color:var(--accent-2)}
+.card p{font-size:13.8px;color:var(--ink-2);margin:0;line-height:1.75}
+.card .foot{margin-top:auto;padding-top:8px;font-size:12.5px;color:var(--ink-3)}
+
+/* 紧凑列表 */
+.list{list-style:none;margin:0;padding:0;border-top:1px solid var(--line-soft)}
+.list li{border-bottom:1px solid var(--line-soft);padding:12px 2px;display:grid;grid-template-columns:74px minmax(0,1fr);gap:14px;margin:0}
+.list .date{font-size:12.5px;color:var(--ink-3);font-variant-numeric:tabular-nums;padding-top:2px}
+.list h3{font-size:15.5px;font-weight:600;font-family:var(--font-ui);line-height:1.6}
+.list h3 a{color:var(--ink);text-decoration:none}
+.list h3 a:hover{color:var(--accent-2)}
+.list p{font-size:13.5px;color:var(--ink-2);margin:.2em 0 0}
+.list .badge{
+  display:inline-block;font-size:11px;color:var(--teal);border:1px solid #3b5850;
+  border-radius:4px;padding:0 6px;margin-right:6px;vertical-align:1px;
+}
+
+/* 对照面板 */
+.compare{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}
+.compare>div{padding:16px 18px}
+.compare>div:first-child{background:var(--panel);border-right:1px solid var(--line)}
+.compare>div:last-child{background:var(--panel-2)}
+.compare h3{font-size:15px;margin-bottom:8px;color:var(--accent-2)}
+.compare ul{margin:0;padding-left:1.1em;font-size:13.8px;color:var(--ink-2)}
+.compare li{margin:.35em 0}
+
+/* 编号步骤 */
+.steps{list-style:none;margin:0;padding:0;counter-reset:s;display:grid;gap:12px}
+.steps li{
+  counter-increment:s;position:relative;padding:14px 16px 14px 58px;
+  background:var(--panel);border:1px solid var(--line-soft);border-radius:var(--radius);font-size:14px;color:var(--ink-2);
+}
+.steps li::before{
+  content:counter(s,decimal-leading-zero);position:absolute;left:16px;top:14px;
+  font-family:var(--font);font-size:17px;color:var(--accent);font-weight:700;
+}
+.steps li b{color:var(--ink);display:block;font-size:15px;margin-bottom:2px;font-family:var(--font-ui)}
+
+/* 深度解析 */
+.deep{
+  background:linear-gradient(180deg,#1c1915,#171411);
+  border:1px solid var(--line);border-radius:var(--radius-lg);
+  padding:26px 26px 20px;
+}
+.deep .lead-judge{
+  border-left:3px solid var(--accent);padding:4px 0 4px 16px;margin:0 0 20px;
+  font-family:var(--font);font-size:17.5px;color:var(--ink);line-height:1.7;
+}
+.deep h3{font-size:17.5px;margin:24px 0 6px;color:var(--accent-2)}
+.deep p{font-size:14.6px;color:var(--ink-2)}
+.deep .factbox{
+  background:var(--panel);border:1px solid var(--line-soft);border-radius:var(--radius);
+  padding:12px 16px;font-size:13.6px;color:var(--ink-2);margin:12px 0;
+}
+.deep .factbox b{color:var(--ink)}
+.deep table{width:100%;border-collapse:collapse;font-size:13.6px;margin:14px 0}
+.deep th,.deep td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}
+.deep th{background:var(--panel-2);color:var(--ink);font-weight:600}
+.deep td{color:var(--ink-2)}
+.deep .quote{
+  font-family:var(--font);font-size:15.5px;color:var(--ink);
+  border-top:1px solid var(--line-soft);border-bottom:1px solid var(--line-soft);
+  padding:12px 0;margin:18px 0 4px;
+}
+.deep .quote cite{display:block;font-family:var(--font-ui);font-size:12.5px;color:var(--ink-3);font-style:normal;margin-top:6px}
+
+/* FAQ */
+.faq{display:grid;gap:10px}
+.faq details{
+  background:var(--panel);border:1px solid var(--line-soft);border-radius:var(--radius);
+  padding:0 16px;overflow:hidden;
+}
+.faq summary{
+  cursor:pointer;list-style:none;padding:13px 30px 13px 0;position:relative;
+  font-size:15px;color:var(--ink);font-weight:600;font-family:var(--font-ui);
+}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{
+  content:"+";position:absolute;right:0;top:11px;font-size:19px;color:var(--accent);font-weight:400;
+}
+.faq details[open] summary::after{content:"–"}
+.faq details p{font-size:14px;color:var(--ink-2);margin:0 0 14px;padding-right:6px}
+
+/* 评论 */
+.comments{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.comment{
+  background:var(--panel);border:1px solid var(--line-soft);border-radius:var(--radius);
+  padding:14px 16px;font-size:14px;color:var(--ink-2);
+}
+.comment .who{display:flex;align-items:center;gap:8px;margin-bottom:6px}
+.comment .avatar{width:26px;height:26px;border-radius:50%;background:var(--panel-2);border:1px solid var(--line);display:flex;align-items:center;justify-content:center;font-size:12px;color:var(--accent-2);font-family:var(--font)}
+.comment .who b{font-size:13.5px;color:var(--ink);font-weight:600}
+.comment .who time{font-size:11.5px;color:var(--ink-3);margin-left:auto}
+.comment p{margin:0}
+.comment .ref{color:var(--teal);font-size:13px}
+
+/* 时间线 */
+.timeline{list-style:none;margin:0;padding:0 0 0 20px;border-left:2px solid var(--line)}
+.timeline li{position:relative;padding:0 0 18px 16px;margin:0}
+.timeline li::before{content:"";position:absolute;left:-27px;top:7px;width:10px;height:10px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 3px rgba(226,96,60,.16)}
+.timeline b{display:block;font-size:12px;color:var(--accent-2);font-family:var(--font-ui);letter-spacing:.4px}
+.timeline h3{font-size:15.5px;font-family:var(--font-ui);margin:2px 0 2px}
+.timeline p{font-size:13.6px;color:var(--ink-2);margin:0}
+
+/* 榜单 */
+.rank{list-style:none;margin:0;padding:0;counter-reset:r;display:grid;gap:10px}
+.rank li{
+  counter-increment:r;display:grid;grid-template-columns:40px minmax(0,1fr) auto;gap:12px;align-items:center;
+  background:var(--panel);border:1px solid var(--line-soft);border-radius:var(--radius);padding:11px 14px;margin:0;
+}
+.rank li::before{
+  content:counter(r,decimal-leading-zero);font-family:var(--font);font-size:17px;color:var(--ink-3);
+}
+.rank li:nth-child(-n+3)::before{color:var(--accent-2)}
+.rank .r-title{font-size:14.5px;color:var(--ink);font-weight:600}
+.rank .r-desc{font-size:12.8px;color:var(--ink-3);margin-top:1px}
+.rank .r-score{font-size:12.5px;color:var(--teal);font-variant-numeric:tabular-nums;white-space:nowrap}
+
+/* 引用/证言 */
+.voice{
+  border:1px solid var(--line);border-radius:var(--radius-lg);
+  background:radial-gradient(80% 130% at 100% 0%,rgba(111,179,160,.10),transparent 60%),var(--panel);
+  padding:22px 24px;font-family:var(--font);font-size:16px;line-height:1.85;color:var(--ink);
+}
+.voice footer{margin-top:12px;font-family:var(--font-ui);font-size:12.8px;color:var(--ink-3)}
+
+/* 相关推荐 */
+.rec-tags{display:flex;flex-wrap:wrap;gap:9px}
+.rec-tags a{
+  font-size:13.5px;color:var(--ink-2);background:var(--panel);border:1px dashed var(--line);
+  border-radius:8px;padding:6px 12px;text-decoration:none;
+}
+.rec-tags a:hover{color:var(--accent-2);border-color:var(--accent);text-decoration:none}
+
+/* 页尾 */
+.site-footer{
+  margin-top:46px;border-top:1px solid var(--line);
+  background:linear-gradient(180deg,#141210,#0d0c0a);
+  padding:34px 0 22px;
+}
+.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1.1fr;gap:26px}
+.footer-brand .brand-text{font-size:19px}
+.footer-brand p{font-size:13.2px;color:var(--ink-3);margin:10px 0 0;line-height:1.8}
+.footer-col h3{font-size:13px;color:var(--ink);letter-spacing:.6px;margin-bottom:10px;font-family:var(--font-ui)}
+.footer-col ul{list-style:none;margin:0;padding:0;font-size:13.4px}
+.footer-col li{margin:.4em 0}
+.footer-col a{color:var(--ink-2);text-decoration:none}
+.footer-col a:hover{color:var(--accent-2)}
+.footer-note{
+  margin-top:26px;padding-top:16px;border-top:1px solid var(--line-soft);
+  font-size:12.3px;color:var(--ink-3);line-height:1.8;
+  display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;
+}
+.footer-note .upd{color:var(--ink-2)}
+
+/* 回到顶部 */
+.to-top{
+  position:fixed;right:16px;bottom:22px;z-index:80;
+  width:42px;height:42px;border-radius:50%;
+  background:var(--panel);border:1px solid var(--line);color:var(--ink);
+  display:flex;align-items:center;justify-content:center;cursor:pointer;
+  opacity:0;visibility:hidden;transform:translateY(8px);
+  transition:opacity .2s ease,transform .2s ease,visibility .2s;
+  box-shadow:var(--shadow);
+}
+.to-top.show{opacity:1;visibility:visible;transform:none}
+.to-top svg{width:17px;height:17px}
+
+@media (max-width:960px){
+  .layout{grid-template-columns:minmax(0,1fr);gap:0}
+  .side-col{position:static;margin-top:30px}
+  .hero-grid{grid-template-columns:1fr}
+  .hero-art{min-height:0;order:-1}
+  .hero-art svg{max-width:250px}
+  .cards{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .footer-grid{grid-template-columns:1fr 1fr}
+  .main-nav{display:none}
+  .main-nav.open{
+    display:block;position:absolute;left:0;right:0;top:100%;
+    background:#121110;border-bottom:1px solid var(--line);padding:8px 12px 14px;
+    box-shadow:var(--shadow);
+  }
+  .main-nav.open ul{flex-direction:column;overflow:visible}
+  .main-nav.open a{border-bottom:none;padding:9px 10px;border-bottom:1px solid var(--line-soft)}
+  .main-nav.open a[aria-current="true"]{background:var(--panel-2)}
+  .menu-btn{display:inline-flex}
+  .search-box input{width:130px}
+  .header-inner{position:relative}
+}
+@media (max-width:620px){
+  :root{--head-h:58px;--notice-h:36px}
+  .brand-text{font-size:16px}
+  .cards{grid-template-columns:1fr}
+  .compare{grid-template-columns:1fr}
+  .compare>div:first-child{border-right:0;border-bottom:1px solid var(--line)}
+  .comments{grid-template-columns:1fr}
+  .footer-grid{grid-template-columns:1fr}
+  .hero{padding:22px 18px}
+  .deep{padding:20px 16px}
+  .list li{grid-template-columns:1fr;gap:2px}
+  .search-box input{width:110px}
+  .header-tools{gap:6px}
+  .to-top{right:12px;bottom:16px;width:38px;height:38px}
+  .footer-note{flex-direction:column;gap:6px}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *{transition:none!important;animation:none!important}
+  .btn:hover,.card:hover,.tag-index a:hover{transform:none}
+}
+</style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<div class="notice-bar" role="note" aria-label="站点更新公告">
+  <span class="dot" aria-hidden="true"></span>
+  <span class="n-text"><strong>不良研究社网站</strong> · 11月7日更新：新增「地下刊物纸张与油墨年代判定」条目，同步公开 1987—1993 年 41 份刊物的核查记录。</span>
+</div>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="/#top" aria-label="返回首页">
+      <svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true">
+        <rect width="64" height="64" rx="14" fill="#1d1a16" stroke="#3a332a"/>
+        <circle cx="32" cy="32" r="17" fill="none" stroke="#e2603c" stroke-width="3"/>
+        <path d="M32 15v34M15 32h34" stroke="#f0c24b" stroke-width="2.2"/>
+        <circle cx="32" cy="32" r="4.4" fill="#e2603c"/>
+      </svg>
+      <span class="brand-text">不良研究社<b>网站</b></span>
+    </a>
+    <nav class="main-nav" id="mainNav" aria-label="主题导航">
+      <ul>
+        <li><a href="/#overview">领域概览</a></li>
+        <li><a href="/#picks">精选推荐</a></li>
+        <li><a href="/#updates">最新更新</a></li>
+        <li><a href="/#channels">分类入口</a></li>
+        <li><a href="/#deep">深度解析</a></li>
+        <li><a href="/#guide">体验指南</a></li>
+        <li><a href="/#faq">常见问答</a></li>
+        <li><a href="/#voices">读者评论</a></li>
+      </ul>
+    </nav>
+    <div class="header-tools">
+      <div class="search-box">
+        <input type="search" id="siteSearch" placeholder="站内查找条目…" aria-label="站内查找条目" autocomplete="off">
+        <div class="search-result" id="searchResult" role="status" aria-live="polite"></div>
+      </div>
+      <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="mainNav">
+        <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 5h14M3 10h14M3 15h14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" fill="none"/></svg>
+        菜单
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="wrap" id="top">
+  <div class="layout">
+
+    <main class="main-col">
+
+      <!-- 首屏 -->
+      <section class="hero" aria-labelledby="heroTitle">
+        <div class="hero-grid">
+          <div>
+            <span class="hero-kicker">亚文化 · 独立出版物 · 深夜话题</span>
+            <h1 id="heroTitle">不良研究社<em>网站</em></h1>
+            <p class="hero-lead">为成年读者整理的独立研究索引：地下刊物、午夜场影像、边缘手艺与冷门档案，每条记录标注来源渠道、核查日期和存疑处，能核对的写清楚，不能核对的单独标出。</p>
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="/#picks">浏览本周精选</a>
+              <a class="btn btn-ghost" href="/#channels">查看 10 个频道</a>
+            </div>
+            <div class="hero-stats">
+              <div><b>1,284</b><span>已核查条目</span></div>
+              <div><b>41</b><span>11月新增档案</span></div>
+              <div><b>10</b><span>主题频道</span></div>
+            </div>
+          </div>
+          <div class="hero-art" aria-hidden="true">
+            <svg viewBox="0 0 320 260" role="img">
+              <defs>
+                <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0" stop-color="#e2603c" stop-opacity=".9"/>
+                  <stop offset="1" stop-color="#f0c24b" stop-opacity=".65"/>
+                </linearGradient>
+              </defs>
+              <circle cx="160" cy="126" r="96" fill="none" stroke="#3a332a" stroke-width="1.4"/>
+              <circle cx="160" cy="126" r="70" fill="none" stroke="#4b4034" stroke-width="1.2" stroke-dasharray="4 7"/>
+              <circle cx="160" cy="126" r="46" fill="none" stroke="url(#g1)" stroke-width="2.4"/>
+              <path d="M160 18v216M52 126h216" stroke="#2b251e" stroke-width="1"/>
+              <g fill="#efe7da">
+                <circle cx="160" cy="126" r="6" fill="#e2603c"/>
+                <circle cx="206" cy="74" r="4" fill="#f0c24b"/>
+                <circle cx="104" cy="176" r="3.4" fill="#6fb3a0"/>
+                <circle cx="230" cy="160" r="2.8" fill="#efe7da" opacity=".7"/>
+                <circle cx="92" cy="86" r="2.6" fill="#efe7da" opacity=".55"/>
+              </g>
+              <path d="M104 176 L160 126 L206 74" stroke="#6fb3a0" stroke-width="1.2" fill="none" opacity=".65"/>
+            </svg>
+            <span class="tag-float" style="top:6%;left:2%">纸本编号 · 041</span>
+            <span class="tag-float" style="bottom:4%;right:0">存档于 1993</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- 领域概览 -->
+      <section class="block" id="overview">
+        <div class="block-head">
+          <h2><span class="idx">01</span>领域概览</h2>
+          <a class="chip-link" href="/#channels">频道地图 →</a>
+        </div>
+        <p class="block-sub">先把研究对象说清楚：这里关注的不是猎奇，而是有实物、有编号、有流通痕迹的边缘文化材料。</p>
+        <div class="cards">
+          <article class="card">
+            <div class="meta"><i>分类基础</i><span>2026-10-22</span></div>
+            <h3>地下刊物与独立志的边界在哪里</h3>
+            <p>按印刷方式、发行编号、流通渠道三项区分。油印本与胶印本差在版数和网点，编辑部地址常被故意隐去。</p>
+          </article>
+          <article class="card">
+            <div class="meta"><i>影像</i><span>2026-10-25</span></div>
+            <h3>午夜场录像带的三种流通版本</h3>
+            <p>院线拷贝、电视剪版、盗录转录，时长差可达 11 分钟。剪辑点位置是判断版本的可靠依据。</p>
+          </article>
+          <article class="card">
+            <div class="meta"><i>声音</i><span>2026-10-28</span></div>
+            <h3>地下磁带小样的编号规则</h3>
+            <p>手写标签、复印封面、单面录制是常见组合。编号常由录音室缩写加年月构成，如「HJ-8703」。</p>
+          </article>
+        </div>
+      </section>
+
+      <!-- 精选内容推荐 -->
+      <section class="block" id="picks">
+        <div class="block-head">
+          <h2><span class="idx">02</span>本周精选内容推荐</h2>
+          <a class="chip-link" href="/#updates">全部更新 →</a>
+        </div>
+        <p class="block-sub">五条经实地核对的条目，附原始出处与存疑说明，适合作为入门阅读顺序。</p>
+        <ul class="list">
+          <li>
+            <span class="date">10-30</span>
+            <div>
+              <h3><a href="/#deep"><span class="badge">核查完成</span>1989 年油印刊物《夜班》第 7 期的纸张判定</a></h3>
+              <p>纤维检测显示为 60 克凸版纸，与同期印刷厂采购记录吻合；封面红墨为铅铬红，1993 年后已少见。</p>
+            </div>
+          </li>
+          <li>
+            <span class="date">11-01</span>
+            <div>
+              <h3><a href="/#deep"><span class="badge">存疑</span>翻录带《雾港夜话》A 面 3 分 12 秒的剪辑痕迹</a></h3>
+              <p>两处跳帧，可能与母带拼接有关。同批带子在二手市场出现过 4 盘，仅 1 盘带原始手写标签。</p>
+            </div>
+          </li>
+          <li>
+            <span class="date">11-03</span>
+            <div>
+              <h3><a href="/#deep">「午夜俱乐部」海报的丝网印与胶印之争</a></h3>
+              <p>放大 40 倍可见网点，但边缘有刮刀痕迹。两种工艺并存的可能性更大，单一结论尚不成立。</p>
+            </div>
+          </li>
+          <li>
+            <span class="date">11-05</span>
+            <div>
+              <h3><a href="/#deep">地下漫画《铁皮鼓手》第 2 集缺页问题</a></h3>
+              <p>馆藏本缺第 14—15 页，私人收藏本完整。缺页本在第 13 页留有装订孔位偏移。</p>
+            </div>
+          </li>
+          <li>
+            <span class="date">11-07</span>
+            <div>
+              <h3><a href="/#deep"><span class="badge">新增</span>深夜电台节目单 1988—1991 的复原方法</a></h3>
+              <p>依据报纸广播预告栏、听众来信与磁带标签三方对照，已复原 63 期节目单，其中 17 期有时间冲突。</p>
+            </div>
+          </li>
+        </ul>
+      </section>
+
+      <!-- 最新更新 -->
+      <section class="block" id="updates">
+        <div class="block-head">
+          <h2><span class="idx">03</span>最新更新</h2>
+          <a class="chip-link" href="/#overview">按主题浏览 →</a>
+        </div>
+        <p class="block-sub">按日期倒序，每条只记新事实：新增条目、修订结论、补充来源。</p>
+        <div class="deep" style="padding:20px 22px">
+          <table>
+            <thead>
+              <tr><th style="width:88px">日期</th><th>更新内容</th><th style="width:96px">类型</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>11-07</td><td>补充《夜班》第 7 期印刷厂采购单据复印件，确认纸张批次为 1989 年 3 月广州产</td><td>新证据</td></tr>
+              <tr><td>11-06</td><td>修订《雾港夜话》版本表：删除原「1990 年首版」说法，改为「1990—1991 年间转录」</td><td>结论修订</td></tr>
+              <tr><td>11-05</td><td>新增「地下漫画缺页登记」第 9 条，附 6 张装订孔位对比图</td><td>新增条目</td></tr>
+              <tr><td>11-03</td><td>电台节目单复原数量从 58 期增至 63 期，标注 17 期时间冲突的具体栏目</td><td>数据更新</td></tr>
+              <tr><td>11-01</td><td>读者提供 1987 年《铁皮鼓手》第 1 集复印本扫描 12 页，已与馆藏比对</td><td>读者投稿</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- 分类入口 -->
+      <section class="block" id="channels">
+        <div class="block-head">
+          <h2><span class="idx">04</span>分类入口</h2>
+          <span class="chip-link">共 10 个频道</span>
+        </div>
+        <p class="block-sub">每个频道对应一类实物或一类流通渠道，点开即是该类的条目列表。</p>
+        <div class="tag-index">
+          <a href="/#overview">地下刊物 <span>216</span></a>
+          <a href="/#overview">午夜场录像带 <span>143</span></a>
+          <a href="/#overview">地下磁带小样 <span>97</span></a>
+          <a href="/#overview">独立漫画 <span>168</span></a>
+          <a href="/#overview">丝网印海报 <span>84</span></a>
+          <a href="/#overview">深夜电台节目单 <span>63</span></a>
+          <a href="/#overview">二手唱片内袋 <span>121</span></a>
+          <a href="/#overview">油印传单 <span>76</span></a>
+          <a href="/#overview">地下电影票根 <span>52</span></a>
+          <a href="/#overview">边缘手艺人口述 <span>39</span></a>
+        </div>
+      </section>
+
+      <!-- 深度解析 -->
+      <section class="block" id="deep">
+        <div class="block-head">
+          <h2><span class="idx">05</span>深度解析</h2>
+          <span class="chip-link">全页唯一长文</span>
+        </div>
+        <div class="deep">
+          <p class="lead-judge">判断：1987—1993 年间这批地下刊物的纸张与油墨，比刊物内容更适合作为断代依据。理由是纸张采购有单据可查、油墨配方有年份断点，而内容里的化名与暗语在同一时期反复复用，无法单独定位。</p>
+
+          <h3>一、纸张批次：三条可核对的线索</h3>
+          <p>先说结论的证据链。1989 年 3 月广州某印刷厂的一批 60 克凸版纸，采购单编号 89-0317，共 12 令。这批纸的纤维长度偏短，透光看有明显云状斑。2026 年 10 月 28 日的检测中，《夜班》第 7 期三张内页均出现同向云斑，与单据描述一致。</p>
+          <div class="factbox">
+            <b>核对结构：</b>①纸张克重（60g / 70g / 80g）→ ②纤维云斑方向 → ③裁切尺寸（185×260mm 或 130×185mm）→ ④装订孔距。四项中有三项吻合才暂定为同批次，单项吻合只记为「可能」。
+          </div>
+          <p>反过来说，这个判断并非没有漏洞。云斑会因存放环境变化，南方潮湿库房里的纸张三年后斑纹可能扩散。1989 年 9 月入库的一批刊物，2026 年复检时云斑面积比原始记录大约 14%，因此单凭肉眼比对容易误判。需要配合油墨成分。</p>
+
+          <h3>二、油墨年份断点：铅铬红的变化</h3>
+          <p>红色油墨是更硬的指标。铅铬红在 1993 年之后的印刷品中使用比例明显下降，原因与当时环保规定和替代颜料价格有关。2026 年 11 月 2 日对《夜班》封面取样，检出铅与铬，比例接近 1:1，指向 1993 年前的配方。</p>
+          <table>
+            <thead>
+              <tr><th>年份区间</th><th>红色油墨特征</th><th>可观察现象</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>1987—1990</td><td>铅铬红为主</td><td>紫外灯下偏暗，边缘有轻微泛黑</td></tr>
+              <tr><td>1991—1993</td><td>铅铬红与有机红混用</td><td>同一印张出现两种红，色差明显</td></tr>
+              <tr><td>1994 以后</td><td>有机红、水性墨增多</td><td>紫外灯下鲜亮，无金属反应</td></tr>
+            </tbody>
+          </table>
+          <p>这套对照表的局限在于，手工作坊可能囤积旧墨。1993 年之后的印本若用了 1991 年剩墨，颜色仍会偏暗。因此油墨只能作为上限参考，不能单独确定下限。</p>
+
+          <h3>三、内容不是没用，而是用法不同</h3>
+          <p>刊物里的笔名「阿钉」「老麦」在 1988—1992 年间至少出现于 7 种不同刊物。若用笔名断代，会得出这些刊物同期出版的结论，但实际上其中两种的纸张批次相差四年。笔名的复用更像是小圈子互相借名，而不是同一批人同时办刊。</p>
+          <p>可以反驳的地方在于：如果笔名复用伴随着相同的排版习惯，比如栏目顺序、字号、页眉位置，那么排版习惯仍可辅助断代。2026 年 10 月 30 日的对比中，《夜班》与《铁皮鼓手》的页眉高度分别是 22mm 和 30mm，差异足以排除同一位排版者。</p>
+
+          <h3>四、夜间广播磁带：另一个可拆解的案例</h3>
+          <p>1988—1991 年的深夜电台节目单复原，用的是三方对照法。报纸预告栏给节目名和时段，听众来信给主持人口头禅，磁带标签给实际录音日期。三者交叉后，63 期里有 46 期时间可锁定到具体某天，17 期存在冲突。</p>
+          <p>冲突的 17 期中，有 9 期是报纸预告与实际播出不一致，原因可能是临时换播。剩下 8 期是磁带标签写错年份。这说明节目单复原的误差主要来自记录环节，而不是播出本身。</p>
+
+          <blockquote class="quote">
+            「1989 年 4 月 11 日那期，预告写的是《雨夜信箱》，带子里却是《旧唱片时间》，主持人开场还说了句『今天换一下』。」
+            <cite>——读者投稿，附磁带转录文本第 2 页，2026-11-01 收录</cite>
+          </blockquote>
+
+          <h3>五、把判断拆成可核对的四步</h3>
+          <p>综合上述案例，一条断代结论至少应拆成四步：纸张来源、油墨成分、印刷工艺、流通记录。四步各自独立，任一步不成立都应降级为「待考」。2026 年 11 月 7 日修订的 41 份刊物记录里，四步齐全的只有 19 份，其余 22 份标为「部分证据」。</p>
+          <p>对收藏者来说，这个分层直接决定价值判断。四步齐全的印本在二手市场报价通常高出 30%—50%，但价格与内容价值并不必然相关。有些内容扎实的刊物因为纸张常见、油墨普通，反而缺乏断代依据，报价偏低。这是资料本身的特性，不是缺陷。</p>
+        </div>
+      </section>
+
+      <!-- 体验指南 -->
+      <section class="block" id="guide">
+        <div class="block-head">
+          <h2><span class="idx">06</span>体验指南</h2>
+          <span class="chip-link">新手向</span>
+        </div>
+        <p class="block-sub">从零开始查一件实物，按下面顺序走，能少走弯路。</p>
+        <ol class="steps">
+          <li><b>先拍再读</b>自然光下平铺拍正反面，光斜 30 度拍纸面纹理。手机微距即可，不必上专业设备。</li>
+          <li><b>量三个尺寸</b>页宽、页高、装订孔距。很多同版印本只在裁切上差 2—3mm，这组数字比封面更能定位批次。</li>
+          <li><b>查油墨</b>紫外灯照红色区域。偏暗沉与鲜亮差别明显，前者指向 1993 年前。没有紫外灯可用普通手电斜照代替，效果差一些。</li>
+          <li><b>找流通痕迹</b>背面印章、手写价格、二手店标签。一枚 1990 年代的旧书章，往往比内容更能确定下限。</li>
+          <li><b>最后才看内容</b>把化名、暗语、栏目顺序单独记下来，作为辅助线索，不要拿它当主证据。</li>
+        </ol>
+        <div class="compare" style="margin-top:16px">
+          <div>
+            <h3>实物核对的优先项</h3>
+            <ul>
+              <li>纸张克重与云斑</li>
+              <li>油墨金属反应</li>
+              <li>装订孔距</li>
+              <li>旧书店印章</li>
+            </ul>
+          </div>
+          <div>
+            <h3>容易误判的次优先项</h3>
+            <ul>
+              <li>笔名和暗语</li>
+              <li>封面设计风格</li>
+              <li>目录栏目数量</li>
+              <li>手写标签年份</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <section class="block" id="faq">
+        <div class="block-head">
+          <h2><span class="idx">07</span>常见问答</h2>
+          <span class="chip-link">8 个高频问题</span>
+        </div>
+        <div class="faq">
+          <details>
+            <summary>地下刊物和独立志在判断上有什么实际区别？</summary>
+            <p>地下刊物强调发行渠道的隐蔽性，常无编辑部地址、无定价，靠熟人传递；独立志可以有明确编者、定价和邮购地址。判断时看版权页信息是否完整，比看印刷质量更有效。</p>
+          </details>
+          <details>
+            <summary>铅铬红油墨一定意味着 1993 年前印刷吗？</summary>
+            <p>不一定。旧墨囤积、外地进货都会造成例外。它只给出上限参考，需要与纸张批次、装订孔距共同判断。单项吻合只能记为「可能」。</p>
+          </details>
+          <details>
+            <summary>磁带标签写错年份的情况多不多？</summary>
+            <p>1988—1991 年的 63 期节目单复原中，有 8 期是标签年份写错，占比约 13%。手写标签常在转录后补填，记错年份很常见。</p>
+          </details>
+          <details>
+            <summary>为什么馆藏本经常缺页，私人收藏本反而完整？</summary>
+            <p>馆藏本多经多次转手和编目，散页容易脱落；私人收藏本常原装未拆。缺页处看装订孔位偏移，能判断是装订时漏页还是后来撕裂。</p>
+          </details>
+          <details>
+            <summary>丝网印与胶印的海报怎么用肉眼分开？</summary>
+            <p>胶印有规律网点，40 倍放大镜下呈 45 度排列；丝网印边缘常见刮刀痕，色块边界略厚。若两者同时出现，可能是套印或后期加工。</p>
+          </details>
+          <details>
+            <summary>深夜电台节目单复原，报纸预告和磁带哪个更可信？</summary>
+            <p>播出实况以磁带为准，但磁带可能被剪接；报纸预告以印刷为准，但可能临时换播。两者冲突时，优先看是否有主持人当场说明。</p>
+          </details>
+          <details>
+            <summary>二手唱片内袋上的手写字有价值吗？</summary>
+            <p>有，但价值在信息而非美观。手写日期、店名、价格能补上流通链条的一环。1980 年代的旧唱片店内袋常印店名和地址，可用来交叉验证城市。</p>
+          </details>
+          <details>
+            <summary>边缘手艺人口述记录怎么判断可信度？</summary>
+            <p>看是否给出可核对细节：机器型号、工价、年份、师徒关系。只给感受和评价的口述，信息密度低，宜作为背景而非证据。</p>
+          </details>
+        </div>
+      </section>
+
+      <!-- 用户评论 -->
+      <section class="block" id="voices">
+        <div class="block-head">
+          <h2><span class="idx">08</span>读者评论与勘误</h2>
+          <a class="chip-link" href="/#updates">查看已采纳勘误 →</a>
+        </div>
+        <p class="block-sub">读者反馈按原文收录，涉及条目的附具体页码或时间码。</p>
+        <div class="comments">
+          <div class="comment">
+            <div class="who"><span class="avatar">陈</span><b>旧纸堆</b><time>11-07</time></div>
+            <p>《夜班》第 7 期那张采购单，编号 89-0317 我在另一份档案里也见过，但数量是 8 令不是 12 令。建议对一下复印件右下角的手写改动。</p>
+          </div>
+          <div class="comment">
+            <div class="who"><span class="avatar">林</span><b>磁带柜第三层</b><time>11-06</time></div>
+            <p>《雾港夜话》A 面 3 分 12 秒的跳帧，我那盘也有，位置一模一样。但 B 面结尾多出 40 秒环境音，不确定是不是同一批转录。</p>
+          </div>
+          <div class="comment">
+            <div class="who"><span class="avatar">周</span><b>不看封面</b><time>11-05</time></div>
+            <p>断代那套四步法有点重。多数人手上就一两本，哪有条件做油墨检测。能不能给个低配版判断流程。</p>
+          </div>
+          <div class="comment">
+            <div class="who"><span class="avatar">吴</span><b>铁皮鼓手收藏</b><time>11-04</time></div>
+            <p>第 2 集缺页问题，我手里这本第 14 页其实是有的，但页码印错成了 41。可能是排字错误，不是漏印。</p>
+          </div>
+          <div class="comment">
+            <div class="who"><span class="avatar">何</span><b>夜班读者</b><time>11-02</time></div>
+            <p>油墨那段写得细，但 1993 年之后手工作坊还在用旧墨，这个例外提了一句就过去了，实际影响可能更大。</p>
+          </div>
+          <div class="comment">
+            <div class="who"><span class="avatar">邓</span><b>电台考古</b><time>10-31</time></div>
+            <p>1989 年 4 月 11 日换播那期，我手上的转录文本里主持人只说了一句「今天换一下」，没有更多解释。和投稿描述一致。</p>
+          </div>
+          <div class="comment">
+            <div class="who"><span class="avatar">赵</span><b>纸张观察</b><time>10-30</time></div>
+            <p>云斑的扩散问题提得对。我存的 1989 年刊物放在南方，斑纹明显比北方朋友那本大，肉眼比容易误判。</p>
+          </div>
+          <div class="comment">
+            <div class="who"><span class="avatar">许</span><b>独立漫画读者</b><time>10-29</time></div>
+            <p>「阿钉」的笔名我见过 4 种刊物都在用，但排版风格完全不一样，同意不能单靠笔名断代。</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 相关资讯 -->
+      <section class="block" id="news">
+        <div class="block-head">
+          <h2><span class="idx">09</span>相关资讯</h2>
+          <span class="chip-link">外部来源与二手市场</span>
+        </div>
+        <ul class="list">
+          <li>
+            <span class="date">11-06</span>
+            <div>
+              <h3><a href="/#news">某旧书平台 10 月独立刊物成交 87 笔，均价 210 元</a></h3>
+              <p>成交价最高的一笔为 1989 年《夜班》全套 6 期，成交 1,340 元，含两张原装油印封面。</p>
+            </div>
+          </li>
+          <li>
+            <span class="date">11-04</span>
+            <div>
+              <h3><a href="/#news">城市图书馆地方文献部开放 1990 年代期刊缩微查阅</a></h3>
+              <p>缩微胶卷编号从 A-1990-01 到 A-1993-74，需提前一个工作日预约，现场提供阅读机。</p>
+            </div>
+          </li>
+          <li>
+            <span class="date">11-02</span>
+            <div>
+              <h3><a href="/#news">二手磁带买家整理出 1988—1991 节目时段对照表</a></h3>
+              <p>该表把每周三、周六的节目时段做了区分，与报纸预告存在 4 处不一致，已提交核对。</p>
+            </div>
+          </li>
+          <li>
+            <span class="date">10-31</span>
+            <div>
+              <h3><a href="/#news">丝网印展将展出 1980 年代演出海报 32 幅</a></h3>
+              <p>展签标注纸张、尺寸和油墨类型，其中 9 幅标明为后期重印，不可作为原件断代依据。</p>
+            </div>
+          </li>
+        </ul>
+      </section>
+
+      <!-- 时间线 / 榜单 -->
+      <section class="block" id="timeline">
+        <div class="block-head">
+          <h2><span class="idx">10</span>档案时间线与条目榜</h2>
+          <span class="chip-link">按核查进度排序</span>
+        </div>
+        <ol class="timeline">
+          <li>
+            <b>1987 · 03</b>
+            <h3>《铁皮鼓手》第 1 集油印本出现</h3>
+            <p>馆藏本 32 页，封面单色，装订为订书钉，孔距 8mm。</p>
+          </li>
+          <li>
+            <b>1989 · 04</b>
+            <h3>《夜班》第 7 期印行</h3>
+            <p>采购单 89-0317 关联，60 克凸版纸，封面铅铬红。</p>
+          </li>
+          <li>
+            <b>1990 · 11</b>
+            <h3>《雾港夜话》磁带转录批次</h3>
+            <p>标签手写年份有 8 期与播出时间冲突，已标注。</p>
+          </li>
+          <li>
+            <b>1993 · 06</b>
+            <h3>红色油墨配方替换</h3>
+            <p>铅铬红使用比例下降，成为断代参考断点。</p>
+          </li>
+        </ol>
+        <div class="rank" style="margin-top:20px">
+          <li style="margin:0">
+            <div><div class="r-title">《夜班》第 7 期</div><div class="r-desc">四步证据齐全，采购单、油墨、孔距、旧书章</div></div>
+            <div class="r-score">证据完整度 96</div>
+          </li>
+          <li style="margin:0">
+            <div><div class="r-title">《铁皮鼓手》第 1 集</div><div class="r-desc">三份馆藏比对，缺页判定待复核</div></div>
+            <div class="r-score">证据完整度 82</div>
+          </li>
+          <li style="margin:0">
+            <div><div class="r-title">《雾港夜话》A 面磁带</div><div class="r-desc">跳帧位置一致，标签年份存疑</div></div>
+            <div class="r-score">证据完整度 74</div>
+          </li>
+        </div>
+      </section>
+
+      <!-- 创作者证言 -->
+      <section class="block" id="maker">
+        <div class="block-head">
+          <h2><span class="idx">11</span>创作者证言</h2>
+          <span class="chip-link">口述记录</span>
+        </div>
+        <blockquote class="voice">
+          那时候印东西不图卖钱，主要是想让同好看见。一令纸能印五百份，装订全靠订书机和手。纸张买哪家的，其实记得清楚，因为每次都要凑钱。现在回头看，这些单据比印出来的东西还难找。
+          <footer>——油印刊物参与者口述，1990 年前后参与 3 种刊物，2026-10-28 记录，经本人同意整理</footer>
+        </blockquote>
+      </section>
+
+      <!-- 相关推荐 -->
+      <section class="block" id="related">
+        <div class="block-head">
+          <h2><span class="idx">12</span>相关推荐</h2>
+          <span class="chip-link">按主题串联</span>
+        </div>
+        <div class="rec-tags">
+          <a href="/#deep">地下刊物纸张断代方法</a>
+          <a href="/#deep">午夜场录像带版本对照</a>
+          <a href="/#deep">1988—1991 深夜电台节目单复原</a>
+          <a href="/#guide">油印本与胶印本区别</a>
+          <a href="/#guide">磁带标签年份误写</a>
+          <a href="/#faq">丝网印海报肉眼辨别</a>
+          <a href="/#faq">二手唱片内袋手写字</a>
+          <a href="/#timeline">铅铬红油墨断点</a>
+          <a href="/#maker">边缘手艺人口述可信度</a>
+          <a href="/#news">旧书平台成交记录</a>
+        </div>
+      </section>
+
+    </main>
+
+    <aside class="side-col" aria-label="侧栏导航与补充信息">
+      <div class="side-card">
+        <h2>栏目导航</h2>
+        <ul class="side-nav" id="sideNav">
+          <li><a href="/#overview">领域概览</a></li>
+          <li><a href="/#picks">精选内容推荐</a></li>
+          <li><a href="/#updates">最新更新</a></li>
+          <li><a href="/#channels">分类入口</a></li>
+          <li><a href="/#deep">深度解析</a></li>
+          <li><a href="/#guide">体验指南</a></li>
+          <li><a href="/#faq">常见问答</a></li>
+          <li><a href="/#voices">读者评论</a></li>
+          <li><a href="/#news">相关资讯</a></li>
+          <li><a href="/#timeline">时间线与榜单</a></li>
+          <li><a href="/#maker">创作者证言</a></li>
+          <li><a href="/#related">相关推荐</a></li>
+        </ul>
+      </div>
+      <div class="side-card">
+        <h3>本周核查进度</h3>
+        <p style="font-size:13.4px;color:var(--ink-2);margin:0">
+          11月7日：41 份刊物记录中，四步证据齐全 19 份，部分证据 22 份；电台节目单已复原 63 期，17 期存时间冲突。
+        </p>
+      </div>
+      <div class="side-card">
+        <h3>热门条目</h3>
+        <ul class="side-nav">
+          <li><a href="/#deep">《夜班》第 7 期纸张判定</a></li>
+          <li><a href="/#deep">《雾港夜话》跳帧分析</a></li>
+          <li><a href="/#guide">低配版实物核对流程</a></li>
+        </ul>
+      </div>
+    </aside>
+
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <span class="brand-text">不良研究社<b>网站</b></span>
+        <p>为成年读者保存有实物、有编号、有流通痕迹的边缘文化材料，逐条标注来源与存疑处。</p>
+      </div>
+      <div class="footer-col">
+        <h3>主题频道</h3>
+        <ul>
+          <li><a href="/#channels">地下刊物</a></li>
+          <li><a href="/#channels">午夜场录像带</a></li>
+          <li><a href="/#channels">地下磁带小样</a></li>
+          <li><a href="/#channels">独立漫画</a></li>
+          <li><a href="/#channels">丝网印海报</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>阅读栏目</h3>
+        <ul>
+          <li><a href="/#deep">深度解析</a></li>
+          <li><a href="/#guide">体验指南</a></li>
+          <li><a href="/#faq">常见问答</a></li>
+          <li><a href="/#news">相关资讯</a></li>
+          <li><a href="/#timeline">时间线与榜单</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>使用与说明</h3>
+        <ul>
+          <li><a href="/#updates">更新记录</a></li>
+          <li><a href="/#voices">提交勘误</a></li>
+          <li><a href="/#related">相关推荐</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-note">
+      <span>页面内含示例条目与示例数据，核查结论以标注日期为准，收藏与交易请自行复核实物。</span>
+      <span class="upd">更新时间 2026-11-08 · 对应正文 11 月 7 日新增与修订项</span>
+    </div>
+    <div class="footer-note" style="border-top:0;margin-top:10px;padding-top:0">
+      <span>© 2026 不良研究社网站 · 面向成年读者的独立研究索引</span>
+      <span>仅收录公开可查来源，不代售实物</span>
+    </div>
+  </div>
+</footer>
+
+<button class="to-top" id="toTop" aria-label="回到顶部">
+  <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 16V5M5 9l5-5 5 5" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+</button>
+
+<script>
+(function(){
+  "use strict";
+
+  /* 移动端菜单 */
+  var menuBtn = document.getElementById('menuBtn');
+  var mainNav = document.getElementById('mainNav');
+  function closeMenu(){
+    if(!mainNav || !menuBtn) return;
+    mainNav.classList.remove('open');
+    menuBtn.setAttribute('aria-expanded','false');
+  }
+  if(menuBtn && mainNav){
+    menuBtn.addEventListener('click', function(){
+      var open = mainNav.classList.toggle('open');
+      menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    mainNav.addEventListener('click', function(e){
+      if(e.target.closest('a')) closeMenu();
+    });
+    document.addEventListener('keydown', function(e){
+      if(e.key === 'Escape') closeMenu();
+    });
+  }
+
+  /* 侧栏滚动高亮 */
+  var sideLinks = Array.prototype.slice.call(document.querySelectorAll('#sideNav a'));
+  var sections = sideLinks.map(function(a){
+    var id = a.getAttribute('href').split('#')[1];
+    return document.getElementById(id);
+  }).filter(Boolean);
+
+  function highlight(){
+    var pos = window.scrollY + 140;
+    var current = sections[0] || null;
+    sections.forEach(function(sec){
+      if(sec.offsetTop <= pos) current = sec;
+    });
+    sideLinks.forEach(function(a){
+      var id = a.getAttribute('href').split('#')[1];
+      var isActive = current && current.id === id;
+      a.classList.toggle('active', !!isActive);
+      if(isActive){ a.setAttribute('aria-current','true'); }
+      else { a.removeAttribute('aria-current'); }
+    });
+  }
+  var ticking = false;
+  window.addEventListener('scroll', function(){
+    if(!ticking){
+      window.requestAnimationFrame(function(){ highlight(); ticking = false; });
+      ticking = true;
+    }
+  }, {passive:true});
+  highlight();
+
+  /* 回到顶部 */
+  var toTop = document.getElementById('toTop');
+  function toggleTop(){
+    if(!toTop) return;
+    if(window.scrollY > 480){ toTop.classList.add('show'); }
+    else { toTop.classList.remove('show'); }
+  }
+  toTop.addEventListener('click', function(){
+    window.scrollTo({top:0, behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth'});
+  });
+  window.addEventListener('scroll', toggleTop, {passive:true});
+  toggleTop();
+
+  /* 本地搜索 */
+  var input = document.getElementById('siteSearch');
+  var resultBox = document.getElementById('searchResult');
+  var index = [];
+  document.querySelectorAll('main h3 a, main .tag-index a, main .rec-tags a, .side-card a').forEach(function(a){
+    var title = (a.textContent || '').trim();
+    var href = a.getAttribute('href') || '';
+    if(title && href.indexOf('#') > -1 || href.indexOf('/#') === 0){
+      if(title && href) index.push({title:title, href:href});
+    }
+  });
+  /* 去重 */
+  var seen = {};
+  index = index.filter(function(item){
+    if(seen[item.title]) return false;
+    seen[item.title] = true;
+    return true;
+  });
+
+  function runSearch(q){
+    var key = q.trim();
+    if(!resultBox) return;
+    if(!key){
+      resultBox.classList.remove('open');
+      resultBox.innerHTML = '';
+      return;
+    }
+    var hits = index.filter(function(item){
+      return item.title.toLowerCase().indexOf(key.toLowerCase()) > -1;
+    }).slice(0,8);
+    if(hits.length === 0){
+      resultBox.innerHTML = '<div class="sr-empty">没有找到与「' + key.replace(/</g,'&lt;') + '」相关的条目。可试试「纸张」「磁带」「油墨」或「电台」。</div>';
+    } else {
+      resultBox.innerHTML = hits.map(function(item){
+        return '<a href="' + item.href + '">' + item.title.replace(/</g,'&lt;') + '</a>';
+      }).join('');
+    }
+    resultBox.classList.add('open');
+  }
+
+  if(input){
+    input.addEventListener('input', function(){ runSearch(input.value); });
+    input.addEventListener('focus', function(){ if(input.value.trim()) runSearch(input.value); });
+    input.addEventListener('keydown', function(e){
+      if(e.key === 'Escape'){ input.value=''; runSearch(''); input.blur(); }
+      if(e.key === 'Enter'){
+        var first = resultBox.querySelector('a');
+        if(first){ first.click(); }
+      }
+    });
+    document.addEventListener('click', function(e){
+      if(!e.target.closest('.search-box')) resultBox.classList.remove('open');
+    });
+    resultBox.addEventListener('click', function(e){
+      if(e.target.closest('a')){ resultBox.classList.remove('open'); input.value=''; }
+    });
+  }
+
+  /* 平滑滚动预留吸顶偏移（补充浏览器兼容） */
+  document.addEventListener('click', function(e){
+    var a = e.target.closest('a[href^="/#"]');
+    if(!a) return;
+    var id = a.getAttribute('href').split('#')[1];
+    if(!id) return;
+    var target = document.getElementById(id);
+    if(!target) return;
+    e.preventDefault();
+    var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var sticky = document.querySelector('.notice-bar');
+    var header = document.querySelector('.site-header');
+    var offset = (sticky ? sticky.offsetHeight : 0) + (header ? header.offsetHeight : 0) + 14;
+    var top = target.getBoundingClientRect().top + window.scrollY - offset;
+    window.scrollTo({top: top, behavior: reduce ? 'auto' : 'smooth'});
+    closeMenu();
+    if(history.replaceState){ history.replaceState(null, '', '/#' + id); }
+  });
+})();
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "不良研究社网站",
+  "inLanguage": "zh-CN",
+  "description": "面向成年读者的独立研究内容索引，收录亚文化观察、独立影像、冷门出版物与深夜话题的长文与笔记，按主题归档并标注来源与核查日期。"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "地下刊物和独立志在判断上有什么实际区别？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "地下刊物强调发行渠道的隐蔽性，常无编辑部地址、无定价，靠熟人传递；独立志可以有明确编者、定价和邮购地址。判断时看版权页信息是否完整，比看印刷质量更有效。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "铅铬红油墨一定意味着 1993 年前印刷吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "不一定。旧墨囤积、外地进货都会造成例外。它只给出上限参考，需要与纸张批次、装订孔距共同判断。单项吻合只能记为「可能」。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "磁带标签写错年份的情况多不多？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "1988—1991 年的 63 期节目单复原中，有 8 期是标签年份写错，占比约 13%。手写标签常在转录后补填，记错年份很常见。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "为什么馆藏本经常缺页，私人收藏本反而完整？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "馆藏本多经多次转手和编目，散页容易脱落；私人收藏本常原装未拆。缺页处看装订孔位偏移，能判断是装订时漏页还是后来撕裂。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "丝网印与胶印的海报怎么用肉眼分开？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "胶印有规律网点，40 倍放大镜下呈 45 度排列；丝网印边缘常见刮刀痕，色块边界略厚。若两者同时出现，可能是套印或后期加工。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "深夜电台节目单复原，报纸预告和磁带哪个更可信？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "播出实况以磁带为准，但磁带可能被剪接；报纸预告以印刷为准，但可能临时换播。两者冲突时，优先看是否有主持人当场说明。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "二手唱片内袋上的手写字有价值吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "有，但价值在信息而非美观。手写日期、店名、价格能补上流通链条的一环。1980 年代的旧唱片店内袋常印店名和地址，可用来交叉验证城市。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "边缘手艺人口述记录怎么判断可信度？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "看是否给出可核对细节：机器型号、工价、年份、师徒关系。只给感受和评价的口述，信息密度低，宜作为背景而非证据。"
+      }
+    }
+  ]
+}
+</script>
+</body>
+                                              </html>
