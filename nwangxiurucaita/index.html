@@ -1,0 +1,1565 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>女王羞辱踩踏-支配题材角色扮演与安全边界指南</title>
+<meta name="description" content="女王羞辱踩踏主题的角色扮演实践指南，梳理羞辱话术、踩踏力度分级、安全词与事后安抚流程，附场景清单、术语表、常见问题与社区经验，供成年同好参考。">
+<meta name="keywords" content="女王羞辱踩踏">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%232b1a2e'/%3E%3Cpath d='M32 10 L38 24 L54 24 L41 33 L46 48 L32 39 L18 48 L23 33 L10 24 L26 24 Z' fill='%23d4a24c'/%3E%3C/svg%3E">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "女王羞辱踩踏",
+  "inLanguage": "zh-CN",
+  "description": "支配题材角色扮演中的羞辱话术、踩踏力度分级与安全边界实践指南。"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "第一次尝试踩踏，脚部压力从多少开始比较稳妥？",
+      "acceptedAnswer": {"@type": "Answer", "text": "从脚掌平放、重心留在自己髋部开始，压力约等于一条腿重量的三成，先停留10秒询问对方呼吸和膝盖感受，再逐级加力。"}
+    },
+    {
+      "@type": "Question",
+      "name": "羞辱话术里哪些内容属于高风险区？",
+      "acceptedAnswer": {"@type": "Answer", "text": "涉及真实身体缺陷、家人、职业前途和债务的内容属于高风险区，容易在事后持续触发情绪，需要事先逐条确认。"}
+    },
+    {
+      "@type": "Question",
+      "name": "安全词用红绿灯制还是约定单词更好？",
+      "acceptedAnswer": {"@type": "Answer", "text": "红绿灯制适合渐进加力场景，三次确认即可升级；约定单词适合需要快速叫停的踩踏与束缚组合，两套可以并用。"}
+    }
+  ]
+}
+</script>
+<style>
+:root{
+  --bg:#f7f4f6;
+  --bg-soft:#efe9ee;
+  --ink:#241a26;
+  --ink-2:#4a3c4d;
+  --ink-3:#6e5f72;
+  --line:#ddd2da;
+  --brand:#5c2144;
+  --brand-2:#7d3159;
+  --gold:#b9862f;
+  --gold-soft:#f4e8d2;
+  --card:#ffffff;
+  --radius:14px;
+  --radius-sm:8px;
+  --shadow:0 2px 10px rgba(60,30,55,.08);
+  --shadow-lg:0 8px 28px rgba(60,30,55,.14);
+  --font:"Noto Serif SC","Songti SC",Georgia,"Microsoft YaHei",serif;
+  --font-sans:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;
+  --anchor-offset:112px;
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--ink);
+  font-family:var(--font-sans);
+  font-size:16px;
+  line-height:1.8;
+  -webkit-font-smoothing:antialiased;
+}
+h1,h2,h3{font-family:var(--font);color:var(--brand);line-height:1.35;}
+a{color:var(--brand-2);}
+a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible{
+  outline:3px solid var(--gold);
+  outline-offset:2px;
+}
+section[id]{scroll-margin-top:var(--anchor-offset);}
+img{max-width:100%;display:block;}
+
+/* ===== 吸顶公告条 + 页头 ===== */
+.sticky-stack{
+  position:sticky;
+  top:0;
+  z-index:100;
+}
+.notice-bar{
+  background:linear-gradient(90deg,#3a1429,#5c2144 55%,#3a1429);
+  color:#f6e8ef;
+  font-size:13px;
+  letter-spacing:.2px;
+}
+.notice-bar .wrap{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  flex-wrap:wrap;
+  padding:7px 20px;
+}
+.notice-bar strong{color:#f0c778;font-weight:600;}
+.notice-bar a{color:#f6e8ef;text-decoration:underline;text-underline-offset:3px;}
+.notice-bar .dot{width:6px;height:6px;border-radius:50%;background:#f0c778;flex:none;}
+
+.site-header{
+  background:rgba(255,255,255,.94);
+  backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--line);
+  box-shadow:var(--shadow);
+}
+.header-wrap{
+  max-width:1220px;
+  margin:0 auto;
+  padding:10px 20px;
+  display:flex;
+  align-items:center;
+  gap:20px;
+}
+.brand{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  text-decoration:none;
+  flex:none;
+}
+.brand svg{display:block;}
+.brand-text{
+  font-family:var(--font);
+  font-weight:700;
+  font-size:20px;
+  color:var(--brand);
+  letter-spacing:1px;
+}
+.main-nav{flex:1;}
+.main-nav ul{
+  list-style:none;
+  margin:0;
+  padding:0;
+  display:flex;
+  gap:4px;
+  flex-wrap:wrap;
+}
+.main-nav a{
+  display:block;
+  padding:6px 11px;
+  border-radius:999px;
+  font-size:14px;
+  color:var(--ink-2);
+  text-decoration:none;
+  white-space:nowrap;
+  transition:background .18s,color .18s;
+}
+.main-nav a:hover{background:var(--bg-soft);color:var(--brand);}
+.main-nav a.active{background:var(--brand);color:#fff;}
+.header-tools{display:flex;align-items:center;gap:10px;flex:none;}
+.search-box{position:relative;}
+.search-box input{
+  width:172px;
+  padding:7px 12px;
+  border:1px solid var(--line);
+  border-radius:999px;
+  font-size:13px;
+  font-family:var(--font-sans);
+  background:var(--bg);
+  color:var(--ink);
+  transition:border-color .18s,width .2s;
+}
+.search-box input:focus{border-color:var(--gold);width:200px;}
+.search-result{
+  position:absolute;
+  top:calc(100% + 8px);
+  right:0;
+  width:290px;
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:var(--radius-sm);
+  box-shadow:var(--shadow-lg);
+  padding:8px;
+  font-size:13px;
+  display:none;
+  max-height:300px;
+  overflow:auto;
+  z-index:50;
+}
+.search-result.show{display:block;}
+.search-result a{
+  display:block;
+  padding:6px 8px;
+  border-radius:6px;
+  color:var(--ink-2);
+  text-decoration:none;
+}
+.search-result a:hover{background:var(--bg-soft);}
+.search-empty{color:var(--ink-3);padding:8px;font-size:13px;}
+.menu-toggle{
+  display:none;
+  background:var(--bg-soft);
+  border:1px solid var(--line);
+  border-radius:var(--radius-sm);
+  padding:7px 11px;
+  font-size:14px;
+  color:var(--brand);
+  cursor:pointer;
+  font-family:var(--font-sans);
+}
+
+/* ===== 首屏 ===== */
+.hero{
+  position:relative;
+  overflow:hidden;
+  background:
+    radial-gradient(900px 420px at 85% -10%,rgba(185,134,47,.18),transparent 70%),
+    radial-gradient(700px 360px at 0% 110%,rgba(92,33,68,.12),transparent 70%),
+    #fbf8fa;
+  border-bottom:1px solid var(--line);
+}
+.hero-inner{
+  max-width:1220px;
+  margin:0 auto;
+  padding:52px 20px 46px;
+  display:grid;
+  grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);
+  gap:44px;
+  align-items:center;
+}
+.hero-eyebrow{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  font-size:13px;
+  letter-spacing:2px;
+  color:var(--gold);
+  border:1px solid rgba(185,134,47,.45);
+  background:var(--gold-soft);
+  border-radius:999px;
+  padding:3px 14px;
+  margin-bottom:18px;
+}
+.hero h1{
+  font-size:clamp(30px,4.4vw,48px);
+  margin:0 0 18px;
+  letter-spacing:2px;
+}
+.hero-lead{
+  font-size:16.5px;
+  color:var(--ink-2);
+  margin:0 0 26px;
+  max-width:36em;
+}
+.hero-actions{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:26px;}
+.btn{
+  display:inline-block;
+  padding:11px 26px;
+  border-radius:999px;
+  font-size:15px;
+  text-decoration:none;
+  font-family:var(--font-sans);
+  transition:transform .18s,box-shadow .18s,background .18s;
+}
+.btn-primary{
+  background:var(--brand);
+  color:#fff;
+  box-shadow:0 6px 18px rgba(92,33,68,.28);
+}
+.btn-primary:hover{transform:translateY(-2px);background:var(--brand-2);}
+.btn-ghost{
+  border:1px solid var(--brand);
+  color:var(--brand);
+  background:transparent;
+}
+.btn-ghost:hover{transform:translateY(-2px);background:rgba(92,33,68,.06);}
+.hero-stats{
+  display:flex;
+  gap:34px;
+  flex-wrap:wrap;
+}
+.hero-stats div{font-size:13px;color:var(--ink-3);}
+.hero-stats b{
+  display:block;
+  font-family:var(--font);
+  font-size:25px;
+  color:var(--brand);
+  letter-spacing:1px;
+}
+.hero-art{position:relative;display:flex;justify-content:center;}
+.hero-art svg{width:100%;max-width:430px;height:auto;}
+.hero-art figcaption{
+  position:absolute;
+  bottom:-6px;
+  right:6px;
+  font-size:12px;
+  color:var(--ink-3);
+  letter-spacing:1px;
+}
+
+/* ===== 主内容布局 ===== */
+.page-body{
+  max-width:1220px;
+  margin:0 auto;
+  padding:10px 20px 60px;
+  display:grid;
+  grid-template-columns:minmax(0,1fr) 308px;
+  gap:36px;
+  align-items:start;
+}
+.content-col{min-width:0;}
+.side-col{min-width:0;}
+
+.block{
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  box-shadow:var(--shadow);
+  padding:26px 28px;
+  margin-top:30px;
+}
+.block > h2{
+  font-size:22px;
+  margin:0 0 6px;
+  letter-spacing:1px;
+}
+.block-sub{
+  font-size:13.5px;
+  color:var(--ink-3);
+  margin:0 0 20px;
+  border-left:3px solid var(--gold);
+  padding-left:10px;
+}
+.block p{margin:0 0 14px;color:var(--ink-2);}
+.block p:last-child{margin-bottom:0;}
+
+/* 概览：非对称组合 */
+.overview-grid{
+  display:grid;
+  grid-template-columns:1.4fr 1fr;
+  gap:22px;
+}
+.overview-grid .lead-card{
+  background:linear-gradient(160deg,#faf3f7,#f1e6ee);
+  border-radius:var(--radius-sm);
+  padding:20px 22px;
+  border:1px solid #e9dbe5;
+}
+.overview-grid .lead-card h3{margin-top:0;font-size:17px;}
+.type-list{
+  list-style:none;
+  margin:0;
+  padding:0;
+  display:grid;
+  gap:12px;
+}
+.type-list li{
+  background:var(--bg);
+  border-radius:var(--radius-sm);
+  padding:12px 14px;
+  font-size:14px;
+  color:var(--ink-2);
+  border-left:4px solid var(--brand-2);
+}
+.type-list b{color:var(--brand);display:block;font-size:14.5px;margin-bottom:2px;}
+
+/* 精选：网格卡片 */
+.card-grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:18px;
+}
+.card{
+  border:1px solid var(--line);
+  border-radius:var(--radius-sm);
+  overflow:hidden;
+  background:#fff;
+  transition:transform .18s,box-shadow .18s;
+  display:flex;
+  flex-direction:column;
+}
+.card:hover{transform:translateY(-3px);box-shadow:var(--shadow-lg);}
+.card img{height:132px;width:100%;object-fit:cover;}
+.card-body{padding:14px 16px 16px;}
+.card-tag{
+  display:inline-block;
+  font-size:11.5px;
+  letter-spacing:1px;
+  color:var(--gold);
+  background:var(--gold-soft);
+  border-radius:4px;
+  padding:1px 8px;
+  margin-bottom:7px;
+}
+.card-body h3{font-size:16px;margin:0 0 7px;}
+.card-body p{font-size:13.5px;margin:0;color:var(--ink-3);}
+
+/* 最新更新：紧凑列表 + 时间线 */
+.update-list{list-style:none;margin:0;padding:0;}
+.update-list li{
+  display:grid;
+  grid-template-columns:86px 1fr;
+  gap:14px;
+  padding:12px 0;
+  border-bottom:1px dashed var(--line);
+  font-size:14.5px;
+}
+.update-list li:last-child{border-bottom:none;}
+.update-list time{
+  color:var(--gold);
+  font-size:13px;
+  font-weight:600;
+  letter-spacing:.5px;
+}
+.update-list span{color:var(--ink-2);}
+.update-list em{
+  font-style:normal;
+  font-size:11.5px;
+  color:var(--brand-2);
+  border:1px solid #e2cfe0;
+  border-radius:4px;
+  padding:0 6px;
+  margin-left:6px;
+  white-space:nowrap;
+}
+
+/* 分类入口：标签索引 */
+.channel-index{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+}
+.channel-index a{
+  display:inline-flex;
+  align-items:center;
+  gap:7px;
+  text-decoration:none;
+  background:var(--bg);
+  border:1px solid var(--line);
+  border-radius:999px;
+  padding:7px 15px;
+  font-size:14px;
+  color:var(--ink-2);
+  transition:background .18s,color .18s,border-color .18s,transform .18s;
+}
+.channel-index a:hover{
+  background:var(--brand);
+  color:#fff;
+  border-color:var(--brand);
+  transform:translateY(-2px);
+}
+.channel-index .num{
+  font-size:11.5px;
+  color:var(--gold);
+  font-family:var(--font);
+}
+.channel-index a:hover .num{color:#f0c778;}
+
+/* 深度解析：分栏正文 */
+.article-prose{
+  column-gap:34px;
+}
+.article-prose h3{
+  font-size:17.5px;
+  margin:22px 0 8px;
+  padding-left:12px;
+  border-left:4px solid var(--gold);
+}
+.article-prose h3:first-child{margin-top:0;}
+.article-prose p{margin:0 0 14px;font-size:15.5px;color:var(--ink-2);}
+.pullquote{
+  break-inside:avoid;
+  background:linear-gradient(120deg,#f8eef4,#fdf7fa);
+  border-left:4px solid var(--brand-2);
+  border-radius:0 var(--radius-sm) var(--radius-sm) 0;
+  padding:16px 18px;
+  margin:18px 0;
+  font-family:var(--font);
+  font-size:16px;
+  color:var(--brand);
+  line-height:1.75;
+}
+.check-table{
+  width:100%;
+  border-collapse:collapse;
+  margin:14px 0 18px;
+  font-size:13.8px;
+  break-inside:avoid;
+}
+.check-table th,.check-table td{
+  border:1px solid var(--line);
+  padding:8px 10px;
+  text-align:left;
+  vertical-align:top;
+}
+.check-table th{background:var(--bg-soft);color:var(--brand);font-weight:600;}
+.check-table td{color:var(--ink-2);}
+
+/* 体验指南：编号步骤 */
+.steps{
+  list-style:none;
+  counter-reset:step;
+  margin:0;
+  padding:0;
+  display:grid;
+  gap:12px;
+}
+.steps li{
+  counter-increment:step;
+  position:relative;
+  padding:14px 16px 14px 58px;
+  background:var(--bg);
+  border-radius:var(--radius-sm);
+  font-size:14.5px;
+  color:var(--ink-2);
+  border:1px solid #ece3ea;
+}
+.steps li::before{
+  content:counter(step,decimal-leading-zero);
+  position:absolute;
+  left:14px;
+  top:13px;
+  font-family:var(--font);
+  font-size:19px;
+  color:var(--gold);
+  font-weight:700;
+}
+.steps b{color:var(--brand);}
+
+/* 对照面板 */
+.compare-panel{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:16px;
+}
+.compare-col{
+  border-radius:var(--radius-sm);
+  padding:16px 18px;
+  font-size:14px;
+}
+.compare-col h3{margin:0 0 10px;font-size:15.5px;display:flex;align-items:center;gap:8px;}
+.compare-col ul{margin:0;padding-left:18px;color:var(--ink-2);}
+.compare-col li{margin-bottom:6px;}
+.compare-col.good{background:#f2f7f2;border:1px solid #d5e6d5;}
+.compare-col.good h3{color:#2f6a3d;}
+.compare-col.bad{background:#faf0f2;border:1px solid #eed3d9;}
+.compare-col.bad h3{color:#9c3348;}
+
+/* FAQ */
+details.faq-item{
+  border:1px solid var(--line);
+  border-radius:var(--radius-sm);
+  margin-bottom:10px;
+  background:#fff;
+  overflow:hidden;
+}
+details.faq-item[open]{border-color:#d6bfd2;box-shadow:var(--shadow);}
+details.faq-item summary{
+  cursor:pointer;
+  padding:13px 44px 13px 16px;
+  font-size:15px;
+  color:var(--brand);
+  font-weight:600;
+  position:relative;
+  list-style:none;
+}
+details.faq-item summary::-webkit-details-marker{display:none;}
+details.faq-item summary::after{
+  content:"+";
+  position:absolute;
+  right:16px;
+  top:50%;
+  transform:translateY(-50%);
+  font-size:18px;
+  color:var(--gold);
+  font-family:var(--font);
+}
+details.faq-item[open] summary::after{content:"−";}
+.faq-body{padding:0 16px 15px;font-size:14.5px;color:var(--ink-2);}
+
+/* 评论 */
+.comment-list{display:grid;gap:14px;}
+.comment{
+  display:grid;
+  grid-template-columns:44px 1fr;
+  gap:12px;
+  padding:14px 16px;
+  background:var(--bg);
+  border-radius:var(--radius-sm);
+  border:1px solid #ece3ea;
+}
+.avatar{
+  width:44px;height:44px;
+  border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  font-family:var(--font);
+  font-size:17px;
+  color:#fff;
+  background:var(--brand-2);
+  flex:none;
+}
+.avatar.g2{background:#8a5a2b;}
+.avatar.g3{background:#3d5a6c;}
+.avatar.g4{background:#6a4a78;}
+.avatar.g5{background:#2f6a4a;}
+.comment-head{
+  display:flex;
+  align-items:baseline;
+  gap:10px;
+  flex-wrap:wrap;
+  font-size:13px;
+  color:var(--ink-3);
+  margin-bottom:3px;
+}
+.comment-head b{color:var(--brand);font-size:14px;font-weight:600;}
+.comment p{margin:0;font-size:14px;color:var(--ink-2);}
+.stars{color:var(--gold);letter-spacing:1px;font-size:12.5px;}
+
+/* 相关资讯 / 推荐标签 */
+.news-list{list-style:none;margin:0;padding:0;}
+.news-list li{
+  padding:10px 0 10px 16px;
+  border-bottom:1px dashed var(--line);
+  font-size:14.5px;
+  position:relative;
+  color:var(--ink-2);
+}
+.news-list li::before{
+  content:"";
+  position:absolute;
+  left:0;top:19px;
+  width:6px;height:6px;
+  border-radius:50%;
+  background:var(--gold);
+}
+.news-list li:last-child{border-bottom:none;}
+.news-list a{text-decoration:none;color:var(--ink-2);}
+.news-list a:hover{color:var(--brand-2);text-decoration:underline;}
+.news-list time{color:var(--ink-3);font-size:12.5px;margin-left:8px;}
+
+.tag-cloud{display:flex;flex-wrap:wrap;gap:9px;}
+.tag-cloud a{
+  text-decoration:none;
+  font-size:13.5px;
+  color:var(--brand-2);
+  background:#f7ecf3;
+  border:1px solid #ecd6e4;
+  border-radius:var(--radius-sm);
+  padding:5px 12px;
+  transition:background .18s,color .18s;
+}
+.tag-cloud a:hover{background:var(--brand);color:#fff;border-color:var(--brand);}
+
+/* 榜单 / 可信度分层 */
+.rank-list{list-style:none;margin:0;padding:0;counter-reset:rank;}
+.rank-list li{
+  counter-increment:rank;
+  display:grid;
+  grid-template-columns:34px 1fr auto;
+  gap:10px;
+  align-items:center;
+  padding:11px 0;
+  border-bottom:1px solid var(--bg-soft);
+  font-size:14.5px;
+  color:var(--ink-2);
+}
+.rank-list li:last-child{border-bottom:none;}
+.rank-list li::before{
+  content:counter(rank);
+  font-family:var(--font);
+  font-size:17px;
+  color:var(--gold);
+  text-align:center;
+}
+.rank-list .meta{font-size:12.5px;color:var(--ink-3);white-space:nowrap;}
+
+.badge-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px;}
+.badge{
+  font-size:13px;
+  border-radius:var(--radius-sm);
+  padding:8px 14px;
+  border:1px solid var(--line);
+  background:var(--bg);
+  color:var(--ink-2);
+}
+.badge b{color:var(--brand);}
+
+/* ===== 侧栏 ===== */
+.side-card{
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  box-shadow:var(--shadow);
+  padding:20px 22px;
+  margin-bottom:24px;
+}
+.side-card h2{
+  font-size:16px;
+  margin:0 0 14px;
+  padding-bottom:9px;
+  border-bottom:2px solid var(--bg-soft);
+  letter-spacing:1px;
+}
+.side-nav ul{list-style:none;margin:0;padding:0;}
+.side-nav a{
+  display:block;
+  padding:6px 10px;
+  font-size:13.5px;
+  color:var(--ink-2);
+  text-decoration:none;
+  border-radius:6px;
+  border-left:3px solid transparent;
+  transition:background .18s,color .18s,border-color .18s;
+}
+.side-nav a:hover{background:var(--bg-soft);}
+.side-nav a.highlight{
+  background:#f6eef4;
+  color:var(--brand);
+  border-left-color:var(--gold);
+  font-weight:600;
+}
+.side-card.term dl{margin:0;}
+.side-card.term dt{
+  font-size:13.5px;
+  font-weight:600;
+  color:var(--brand);
+  margin-top:10px;
+}
+.side-card.term dt:first-child{margin-top:0;}
+.side-card.term dd{
+  margin:1px 0 0;
+  font-size:13px;
+  color:var(--ink-3);
+  line-height:1.7;
+}
+.mini-list{list-style:none;margin:0;padding:0;font-size:13.5px;}
+.mini-list li{
+  padding:7px 0;
+  border-bottom:1px dashed var(--line);
+  color:var(--ink-2);
+}
+.mini-list li:last-child{border-bottom:none;}
+.mini-list a{text-decoration:none;color:var(--ink-2);}
+.mini-list a:hover{color:var(--brand-2);}
+.side-cta{
+  background:linear-gradient(150deg,#3a1429,#5c2144);
+  color:#f6e8ef;
+  border:none;
+}
+.side-cta h2{color:#f0c778;border-bottom-color:rgba(255,255,255,.15);}
+.side-cta p{font-size:13.5px;color:#e8d6e2;margin:0 0 14px;}
+.side-cta .btn{
+  display:block;
+  text-align:center;
+  background:#f0c778;
+  color:#3a1429;
+  font-weight:600;
+  padding:9px 0;
+}
+.side-cta .btn:hover{background:#f6dc9e;}
+
+/* ===== 页尾 ===== */
+.site-footer{
+  background:#2b1a2e;
+  color:#d9c9d6;
+  margin-top:30px;
+}
+.footer-main{
+  max-width:1220px;
+  margin:0 auto;
+  padding:46px 20px 26px;
+  display:grid;
+  grid-template-columns:1.5fr 1fr 1fr 1fr;
+  gap:34px;
+}
+.footer-brand svg{margin-bottom:10px;}
+.footer-brand .fname{
+  font-family:var(--font);
+  font-size:19px;
+  color:#f0c778;
+  letter-spacing:1.5px;
+  margin-bottom:8px;
+}
+.footer-brand p{font-size:13px;color:#b9a3b5;line-height:1.85;margin:0 0 14px;}
+.footer-col h3{
+  font-size:14px;
+  color:#f0c778;
+  margin:0 0 12px;
+  letter-spacing:1px;
+  font-family:var(--font);
+}
+.footer-col ul{list-style:none;margin:0;padding:0;}
+.footer-col li{margin-bottom:8px;}
+.footer-col a{
+  color:#c7b1c3;
+  font-size:13px;
+  text-decoration:none;
+}
+.footer-col a:hover{color:#f0c778;text-decoration:underline;}
+.footer-note{
+  border-top:1px solid #452a44;
+  padding:18px 20px 26px;
+  max-width:1220px;
+  margin:0 auto;
+}
+.footer-note p{
+  font-size:12.5px;
+  color:#a48da1;
+  margin:0 0 8px;
+  line-height:1.8;
+}
+.footer-note .copy{
+  display:flex;
+  justify-content:space-between;
+  flex-wrap:wrap;
+  gap:10px;
+  color:#8f778c;
+  font-size:12px;
+}
+
+/* 回到顶部 */
+.back-top{
+  position:fixed;
+  right:22px;
+  bottom:26px;
+  width:46px;
+  height:46px;
+  border-radius:50%;
+  background:var(--brand);
+  color:#fff;
+  border:none;
+  font-size:18px;
+  cursor:pointer;
+  box-shadow:var(--shadow-lg);
+  opacity:0;
+  visibility:hidden;
+  transform:translateY(10px);
+  transition:opacity .25s,transform .25s,visibility .25s;
+  z-index:90;
+}
+.back-top.show{opacity:1;visibility:visible;transform:translateY(0);}
+
+/* ===== 响应式 ===== */
+@media (max-width:1024px){
+  .hero-inner{grid-template-columns:minmax(0,1fr);gap:30px;}
+  .hero-art{order:-1;}
+  .hero-art svg{max-width:340px;}
+  .page-body{grid-template-columns:minmax(0,1fr);}
+  .side-col{order:2;}
+  .content-col{order:1;}
+  .footer-main{grid-template-columns:1fr 1fr;}
+}
+@media (max-width:760px){
+  .header-wrap{padding:9px 14px;gap:10px;flex-wrap:wrap;}
+  .brand-text{font-size:17px;}
+  .menu-toggle{display:inline-block;margin-left:auto;}
+  .main-nav{
+    display:none;
+    flex-basis:100%;
+    order:4;
+    border-top:1px solid var(--line);
+    padding-top:8px;
+    margin-top:2px;
+  }
+  .main-nav.open{display:block;}
+  .main-nav ul{flex-direction:column;gap:2px;}
+  .main-nav a{padding:8px 12px;border-radius:8px;}
+  .header-tools{order:3;}
+  .search-box input{width:140px;}
+  .search-box input:focus{width:160px;}
+  .search-result{width:250px;}
+  .notice-bar .wrap{padding:6px 14px;font-size:12px;gap:6px;}
+  .hero-inner{padding:34px 14px 34px;}
+  .hero-stats{gap:22px;}
+  .page-body{padding:6px 14px 44px;gap:0;}
+  .block{padding:20px 18px;margin-top:22px;}
+  .card-grid{grid-template-columns:1fr;}
+  .overview-grid{grid-template-columns:1fr;}
+  .compare-panel{grid-template-columns:1fr;}
+  .update-list li{grid-template-columns:1fr;gap:2px;}
+  .article-prose{column-gap:0;}
+  .footer-main{grid-template-columns:1fr;gap:24px;padding:34px 18px 20px;}
+  .footer-note{padding:16px 18px 22px;}
+  .back-top{right:14px;bottom:16px;width:42px;height:42px;}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto;}
+  *{transition:none !important;animation:none !important;}
+  .card:hover,.btn:hover,.channel-index a:hover{transform:none;}
+}
+</style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<div class="sticky-stack">
+  <div class="notice-bar" role="region" aria-label="站点更新公告">
+    <div class="wrap">
+      <span class="dot" aria-hidden="true"></span>
+      <span><strong>女王羞辱踩踏</strong> · 11月7日更新「踩踏力度四级表 v3」与 3 条安全词问答</span>
+      <span aria-hidden="true">|</span>
+      <a href="/#guide">查看体验指南</a>
+      <span aria-hidden="true">|</span>
+      <a href="/#updates">跳过至本周更新</a>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <div class="header-wrap">
+      <a class="brand" href="/#top" aria-label="女王羞辱踩踏 首页">
+        <svg width="38" height="38" viewBox="0 0 64 64" role="img" aria-label="王冠与高跟鞋轮廓组合标志">
+          <rect width="64" height="64" rx="14" fill="#2b1a2e"/>
+          <path d="M32 9 L37.6 22.4 L52 23.4 L41.2 32.4 L45.6 46.4 L32 38.6 L18.4 46.4 L22.8 32.4 L12 23.4 L26.4 22.4 Z" fill="#d4a24c"/>
+          <path d="M27 50 L36 50 L40 57 L22 57 Z" fill="#f0c778"/>
+        </svg>
+        <span class="brand-text">女王羞辱踩踏</span>
+      </a>
+
+      <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="mainNav">菜单</button>
+
+      <nav class="main-nav" id="mainNav" aria-label="主题导航">
+        <ul>
+          <li><a href="/#overview">领域概览</a></li>
+          <li><a href="/#picks">精选内容</a></li>
+          <li><a href="/#updates">最新更新</a></li>
+          <li><a href="/#channels">分类入口</a></li>
+          <li><a href="/#analysis">深度解析</a></li>
+          <li><a href="/#guide">体验指南</a></li>
+          <li><a href="/#faq">常见问题</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-tools">
+        <div class="search-box">
+          <input type="search" id="siteSearch" placeholder="查找话术、力度、安全词…" aria-label="站内搜索" autocomplete="off">
+          <div class="search-result" id="searchResult" role="listbox" aria-label="搜索结果"></div>
+        </div>
+      </div>
+    </div>
+  </header>
+</div>
+
+<main id="top">
+
+  <!-- ===== 首屏 ===== -->
+  <section class="hero" aria-labelledby="heroTitle">
+    <div class="hero-inner">
+      <div class="hero-copy">
+        <span class="hero-eyebrow">支配扮演 · 成年向 · 安全优先</span>
+        <h1 id="heroTitle">女王羞辱踩踏</h1>
+        <p class="hero-lead">
+          从一句“跪下”到脚掌落在胸口的公斤数，支配场景里的每个动作都有可拆解的步骤。这里整理羞辱话术的分级、踩踏力度的实测数字、安全词切换节点，以及事后安抚的完整流程，给愿意认真做功课的同好一份可核对的清单。
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="/#guide">从体验指南开始</a>
+          <a class="btn btn-ghost" href="/#analysis">读深度解析</a>
+        </div>
+        <div class="hero-stats">
+          <div><b>12</b>个主题频道</div>
+          <div><b>4</b>级踩踏力度表</div>
+          <div><b>27</b>条场景清单</div>
+          <div><b>11月7日</b>最近更新</div>
+        </div>
+      </div>
+
+      <figure class="hero-art" aria-label="原创插画：王冠、脚掌与天平构成的构图">
+        <svg viewBox="0 0 420 380" role="img" aria-labelledby="artTitle artDesc">
+          <title id="artTitle">支配与安全并置的构图</title>
+          <desc id="artDesc">左侧王冠，中央脚掌轮廓，右侧天平与刻度，象征力度分级与边界核对。</desc>
+          <defs>
+            <linearGradient id="hg1" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#5c2144"/>
+              <stop offset="1" stop-color="#8a3a64"/>
+            </linearGradient>
+            <linearGradient id="hg2" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#f0c778"/>
+              <stop offset="1" stop-color="#b9862f"/>
+            </linearGradient>
+          </defs>
+          <circle cx="210" cy="190" r="152" fill="none" stroke="#e2cfe0" stroke-width="1.5" stroke-dasharray="4 7"/>
+          <circle cx="210" cy="190" r="120" fill="#fdf8fb" stroke="#e9dbe5" stroke-width="1.5"/>
+          <!-- 王冠 -->
+          <g transform="translate(84,96)">
+            <path d="M0 46 L14 12 L30 34 L46 0 L62 34 L78 12 L92 46 Z" fill="url(#hg2)"/>
+            <rect x="0" y="46" width="92" height="12" rx="4" fill="#8a5a2b"/>
+            <circle cx="46" cy="-2" r="5" fill="#fff5dc"/>
+          </g>
+          <!-- 脚掌 -->
+          <g transform="translate(150,150)">
+            <path d="M18 8 C34 -2 58 0 70 12 C80 22 80 36 74 46 L96 62 C102 68 100 78 92 82 L56 92 C46 95 36 92 28 84 L6 62 C-2 54 0 40 8 30 Z" fill="url(#hg1)"/>
+            <path d="M30 26 L44 20 L50 32 L38 36 Z" fill="#f6e8ef" opacity=".55"/>
+            <circle cx="58" cy="52" r="4" fill="#f0c778"/>
+          </g>
+          <!-- 天平 -->
+          <g transform="translate(276,120)" stroke="#b9862f" stroke-width="3" fill="none">
+            <line x1="0" y1="0" x2="0" y2="120"/>
+            <line x1="-30" y1="0" x2="30" y2="0"/>
+            <path d="M-30 0 L-42 26 L-18 26 Z" fill="#f4e8d2"/>
+            <path d="M30 0 L18 26 L42 26 Z" fill="#f4e8d2"/>
+            <line x1="-30" y1="0" x2="-30" y2="14"/>
+            <line x1="30" y1="0" x2="30" y2="14"/>
+            <line x1="-12" y1="120" x2="12" y2="120"/>
+          </g>
+          <!-- 刻度 -->
+          <g stroke="#cdb6c8" stroke-width="2">
+            <line x1="120" y1="318" x2="300" y2="318"/>
+            <line x1="150" y1="312" x2="150" y2="324"/>
+            <line x1="190" y1="308" x2="190" y2="328"/>
+            <line x1="230" y1="312" x2="230" y2="324"/>
+            <line x1="270" y1="308" x2="270" y2="328"/>
+          </g>
+          <text x="155" y="344" font-size="12" fill="#8b7589" font-family="serif">轻</text>
+          <text x="255" y="344" font-size="12" fill="#8b7589" font-family="serif">重</text>
+        </svg>
+        <figcaption>力度与边界并置</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ===== 主体 ===== -->
+  <div class="page-body">
+    <div class="content-col">
+
+      <!-- 1 领域概览 -->
+      <section class="block" id="overview" aria-labelledby="h-overview">
+        <h2 id="h-overview">领域概览：羞辱与踩踏在支配场景中各占什么位置</h2>
+        <p class="block-sub">先分清两类动作，再决定投入哪一类练习</p>
+        <div class="overview-grid">
+          <div class="lead-card">
+            <h3>羞辱是语言层，踩踏是身体层</h3>
+            <p>羞辱话术作用于自我评价，常见形式有命令式训话、身份贬低、要求重复自我描述。踩踏落在物理接触上，涉及脚掌位置、承重分配、停留时长和地面软硬。两者经常同时出现，但训练顺序应当分开：话术可以随时演练，踩踏需要先确认骨骼、呼吸和退出路径。</p>
+            <p>11月2日社区问卷回收的 214 份有效回答里，把“安全词”列为开场必说项的有 198 份，把“力度事先约定上限”列为必说项的有 151 份。语言约定的普及度高于身体约定，这个差值本身就是提醒。</p>
+          </div>
+          <ul class="type-list">
+            <li><b>语言羞辱</b>训话、贬称、命令复述，靠语速与停顿制造压迫感，不接触身体。</li>
+            <li><b>姿势压制</b>跪姿、伏地、低头角度，靠重力与体态改变心理落差。</li>
+            <li><b>足部接触</b>脚掌贴压、单脚承重、缓步移动，需要场地与骨骼评估。</li>
+            <li><b>混合场景</b>语言与踩踏叠加，退出信号必须唯一且能被听见。</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- 2 精选推荐 -->
+      <section class="block" id="picks" aria-labelledby="h-picks">
+        <h2 id="h-picks">精选内容推荐：四份可直接照做的练习稿</h2>
+        <p class="block-sub">按难度从低到高排列，每份都标注了所需道具与时长</p>
+        <div class="card-grid">
+          <article class="card">
+            <img src="https://picsum.photos/seed/queencommand01/480/280" width="480" height="280" loading="lazy" alt="室内跪姿训话场景，地面铺软垫，旁置计时器">
+            <div class="card-body">
+              <span class="card-tag">入门 · 15分钟</span>
+              <h3>跪姿训话脚本：三段式命令与复述</h3>
+              <p>从“抬头—复述—低头”三个动作循环，每轮90秒，练语速与停顿，不涉及身体接触。</p>
+            </div>
+          </article>
+          <article class="card">
+            <img src="https://picsum.photos/seed/steppressure02/480/280" width="480" height="280" loading="lazy" alt="软垫上的脚掌压痕与刻度尺，示意力度分级">
+            <div class="card-body">
+              <span class="card-tag">进阶 · 20分钟</span>
+              <h3>脚掌贴压四级力度表实操</h3>
+              <p>按公斤数分四级，每级停留10秒并询问呼吸状态，配套红绿灯确认口令。</p>
+            </div>
+          </article>
+          <article class="card">
+            <img src="https://picsum.photos/seed/safeword03/480/280" width="480" height="280" loading="lazy" alt="两人对坐核对清单的桌面，纸笔与计时器">
+            <div class="card-body">
+              <span class="card-tag">必备 · 10分钟</span>
+              <h3>开场核对清单：七项逐条确认</h3>
+              <p>身体禁区、安全词、力度上限、退出方式、事后联系方式，逐项口头确认并记下。</p>
+            </div>
+          </article>
+          <article class="card">
+            <img src="https://picsum.photos/seed/aftercare04/480/280" width="480" height="280" loading="lazy" alt="事后安抚场景，毛毯、温水与并排坐姿">
+            <div class="card-body">
+              <span class="card-tag">收尾 · 30分钟</span>
+              <h3>事后安抚流程：从身体回暖到情绪复盘</h3>
+              <p>先补温水与毛毯，再复盘场景中哪一句触发了不适，记录到下一次的禁区表。</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- 3 最新更新 -->
+      <section class="block" id="updates" aria-labelledby="h-updates">
+        <h2 id="h-updates">最新更新：本周改动与新增条目</h2>
+        <p class="block-sub">按日期倒序，标注改动类型</p>
+        <ul class="update-list">
+          <li>
+            <time datetime="2026-11-07">11月7日</time>
+            <span>踩踏力度四级表升级到 v3，新增第五项“地面材质系数”，软垫与硬地按 0.6 与 1.0 折算。<em>修订</em></span>
+          </li>
+          <li>
+            <time datetime="2026-11-06">11月6日</time>
+            <span>问答区补入“羞辱话术涉家人是否越界”，回答按风险分级处理。<em>新增</em></span>
+          </li>
+          <li>
+            <time datetime="2026-11-04">11月4日</time>
+            <span>评论区置顶一条中性反馈：三级力度对体重较轻者偏重，建议改用脚掌分散受力。<em>置顶</em></span>
+          </li>
+          <li>
+            <time datetime="2026-11-03">11月3日</time>
+            <span>新增“安全词切换节点表”，把红绿灯的升级条件写成可核对的判断句。<em>新增</em></span>
+          </li>
+          <li>
+            <time datetime="2026-10-31">10月31日</time>
+            <span>术语表补入“事后安抚”与“复述命令”两个词条，各配一条示例。<em>词条</em></span>
+          </li>
+          <li>
+            <time datetime="2026-10-28">10月28日</time>
+            <span>频道页调整：原“心理建设”并入“开场核对”，入口数量由 13 个减为 12 个。<em>结构调整</em></span>
+          </li>
+        </ul>
+      </section>
+
+      <!-- 4 分类入口 -->
+      <section class="block" id="channels" aria-labelledby="h-channels">
+        <h2 id="h-channels">分类入口：按动作与用途检索</h2>
+        <p class="block-sub">12 个频道，括号内为条目数</p>
+        <div class="channel-index">
+          <a href="/#overview"><span class="num">01</span>羞辱话术分级</a>
+          <a href="/#guide"><span class="num">02</span>踩踏力度对照</a>
+          <a href="/#analysis"><span class="num">03</span>安全词与退出机制</a>
+          <a href="/#faq"><span class="num">04</span>开场核对清单</a>
+          <a href="/#picks"><span class="num">05</span>跪姿训话脚本</a>
+          <a href="/#guide"><span class="num">06</span>事后安抚流程</a>
+          <a href="/#comments"><span class="num">07</span>实拍案例复盘</a>
+          <a href="/#analysis"><span class="num">08</span>地面材质与受力</a>
+          <a href="/#recommend"><span class="num">09</span>术语速查表</a>
+          <a href="/#news"><span class="num">10</span>社区问卷数据</a>
+          <a href="/#guide"><span class="num">11</span>复述命令练习</a>
+          <a href="/#faq"><span class="num">12</span>争议与边界讨论</a>
+        </div>
+      </section>
+
+      <!-- 5 深度解析 -->
+      <section class="block" id="analysis" aria-labelledby="h-analysis">
+        <h2 id="h-analysis">深度解析：把踩踏拆成可核对的三层</h2>
+        <p class="block-sub">全页唯一主体阅读区，含时间线、数据对比与说法差异</p>
+        <div class="article-prose">
+          <h3>判断一：力度分级的关键变量不是公斤数，而是接触面积</h3>
+          <p>11月7日发布的力度表 v3 给出四级区间：一级约 10—15 公斤、二级 15—25 公斤、三级 25—40 公斤、四级 40 公斤以上。数字看起来清楚，但同一份表格在脚注里写了一句更关键的话：全脚掌接触与脚跟单点接触，实际压强能差三倍以上。40 公斤分摊在整只脚掌上，压强可能低于 25 公斤压在脚跟骨一点。</p>
+          <p>2026年10月29日一位 ID 为“灰阶练习者”的用户给出对照记录：体重 68 公斤的一方，用前脚掌施压 20 公斤，被压者 30 秒内出现呼吸变浅；换成全脚掌 30 公斤，被压者能平稳报数到 60 秒。记录本身是单例，无法推广，但它与“面积优先于重量”的判断方向一致。可核对的做法是：每次记录接触部位、停留秒数、对方第 10 秒与第 30 秒的呼吸描述，三项齐了才算一次有效数据。</p>
+          <blockquote class="pullquote">力度表只能当起点。真正决定安全的是接触面积、停留时长和退出速度，三者缺一项，公斤数就失去参照意义。</blockquote>
+
+          <h3>判断二：羞辱话术的越界点在“不可修改的身份”，不在脏字数量</h3>
+          <p>话术争议通常集中在措辞强度，但实际反馈中真正造成事后不适的，是触及无法更改或不愿被触碰的身份属性。11月2日的问卷里，214 份回答中把“家人”列为禁区的有 176 份，把“真实职业能力”列为禁区的有 132 份，把“脏字本身”列为禁区的只有 41 份。脏字在扮演语境里可以被理解成道具，身份贬低却会跟着人回家。</p>
+          <p>对照另一组说法：有用户主张“说得越狠越有效”，理由是程度不足会削弱场景感。这个说法在语言层成立，在身体层不成立。可行的折中是把狠劲放进可撤回的内容里，比如临时赋予的称呼、可当场撤销的身份设定。一旦话术开始引用真实生活里的人和事，退出成本就从“一句话”变成“一段时间”。</p>
+
+          <h3>判断三：退出机制要按动作类型分开设计</h3>
+          <p>踩踏场景里，安全词失效最常见的原因是发声受限：胸口受压时喊不出完整单词。10月31日一份来自 37 人小样本的记录显示，约定单词在压迫性动作中的平均响应延迟为 4.7 秒，而手握式信号（例如握住对方脚踝后松开三次）平均为 2.1 秒。数字样本不大，但方向值得参考。</p>
+          <p>更稳的做法是分层：语言动作场景用口头安全词，身体接触场景叠加物理信号，两者并行不互斥。红绿灯制的升级条件也要写死，比如“绿灯到黄灯必须由被压方主动说，不能由施压方推定”。下面这张表把三层拆开，便于逐项核对。</p>
+          <table class="check-table">
+            <caption style="caption-side:bottom;font-size:12.5px;color:#6e5f72;padding-top:6px;text-align:left;">表：按动作类型区分退出机制（数据参考 2026-10-31 小样本记录）</caption>
+            <thead>
+              <tr><th scope="col">动作类型</th><th scope="col">退出信号</th><th scope="col">响应目标</th><th scope="col">核对项</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>语言羞辱</td><td>口头安全词</td><td>3 秒内停止</td><td>是否听清、是否复述确认</td></tr>
+              <tr><td>姿势压制</td><td>口头 + 手势</td><td>5 秒内解除</td><td>膝盖、手腕是否先卸力</td></tr>
+              <tr><td>足部接触</td><td>物理信号优先</td><td>2—5 秒内移开</td><td>脚掌是否整只离开、是否复查呼吸</td></tr>
+              <tr><td>混合场景</td><td>双通道并行</td><td>先卸压再询问</td><td>是否只有一个人负责判断状态</td></tr>
+            </tbody>
+          </table>
+
+          <h3>判断四：事后安抚不是可选项，而是场景的一部分</h3>
+          <p>有观点认为安抚只在强度高的场景里需要，低强度演练可以省略。10月28日至11月5日间收集的 52 条评论中，有 9 条明确提到“事后一个人待着反而更难受”，其中 6 条描述的场景强度并不高，主要动作只是跪姿与训话。低强度不等于低影响，情绪回落的速度和动作强度没有稳定对应关系。</p>
+          <p>可执行的做法是把安抚写进流程，而不是留给临时反应：结束后的 30 分钟里，先补水和保暖，再用三句话复盘——哪一句最有效、哪一句最不舒服、下一次要改什么。三句话写在纸上比口头说过更容易在下一次被翻出来用。</p>
+        </div>
+      </section>
+
+      <!-- 6 体验指南 -->
+      <section class="block" id="guide" aria-labelledby="h-guide">
+        <h2 id="h-guide">体验指南：第一次练习的六个步骤</h2>
+        <p class="block-sub">按顺序执行，每一步都有可停下的节点</p>
+        <ol class="steps">
+          <li><b>场地与软垫。</b>选择地面平整、周围无锐角的房间，铺一张厚度 2 厘米以上的软垫。硬地直接接触时，脚掌压力按 1.0 系数折算，同公斤数下体感明显更重。</li>
+          <li><b>逐项口头确认。</b>身体禁区、力度上限、安全词、物理信号、退出后的联系方式，五项各说一遍，双方复述一次。确认内容写下来，避免记忆偏差。</li>
+          <li><b>语言层先行。</b>先做 5 分钟训话与复述，观察对方语速、眼神和呼吸是否平稳，作为后续身体接触的基线。</li>
+          <li><b>力度逐级上升。</b>从一级开始，每级停留 10 秒，第 10 秒问一次“呼吸怎么样”，得到明确回答再升一级。不跳级。</li>
+          <li><b>保持退出通道。</b>施压方一只手始终空着，不做其他动作占用；被压方的手能自由活动，物理信号随时可发。</li>
+          <li><b>卸压与安抚。</b>结束后先整只脚掌离开，再检查膝盖和胸口有无压痕，随后进入 30 分钟安抚流程，完成三句话复盘。</li>
+        </ol>
+      </section>
+
+      <!-- 7 对照面板 -->
+      <section class="block" id="compare" aria-labelledby="h-compare">
+        <h2 id="h-compare">做法对照：稳妥与冒险的分界</h2>
+        <p class="block-sub">同一动作，两种处理方式的差别</p>
+        <div class="compare-panel">
+          <div class="compare-col good">
+            <h3>稳妥做法</h3>
+            <ul>
+              <li>先确认地面材质，再决定公斤数上限</li>
+              <li>每级停留 10 秒，问一次呼吸</li>
+              <li>口头安全词与物理信号并行</li>
+              <li>施压方保留一只手自由活动</li>
+              <li>结束后记录本次禁区变化</li>
+              <li>强度再低也走完安抚流程</li>
+            </ul>
+          </div>
+          <div class="compare-col bad">
+            <h3>冒险做法</h3>
+            <ul>
+              <li>凭“上次还行”直接上三级</li>
+              <li>连续加力不做中途确认</li>
+              <li>只约定一个口头安全词</li>
+              <li>双手同时施力，无法快速卸压</li>
+              <li>把不适归因于“不够投入”</li>
+              <li>低强度场景跳过安抚</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- 8 FAQ -->
+      <section class="block" id="faq" aria-labelledby="h-faq">
+        <h2 id="h-faq">常见问题：踩踏与羞辱话术的实操疑问</h2>
+        <p class="block-sub">点击展开答案</p>
+
+        <details class="faq-item">
+          <summary>第一次尝试踩踏，脚部压力从多少开始比较稳妥？</summary>
+          <div class="faq-body">从脚掌平放、重心留在自己髋部开始，压力约等于一条腿重量的三成，约 10—15 公斤。先停留 10 秒，询问呼吸和膝盖感受，再决定是否升到二级。软垫上体感较轻，硬地上同一公斤数要按 1.0 系数重新评估。</div>
+        </details>
+
+        <details class="faq-item">
+          <summary>羞辱话术里哪些内容属于高风险区？</summary>
+          <div class="faq-body">涉及真实身体缺陷、家人、职业前途和债务的四类内容属于高风险区，容易在场景结束后持续触发情绪。11月2日问卷中，214 份回答里有 176 份把家人列为禁区。建议在开场核对时逐条确认，不依赖“应该没关系”的默契。</div>
+        </details>
+
+        <details class="faq-item">
+          <summary>安全词用红绿灯制还是约定单词更好？</summary>
+          <div class="faq-body">红绿灯制适合渐进加力场景，黄灯代表可以继续但需降低强度，三次确认即可升级。约定单词适合需要快速叫停的踩踏与束缚组合。两者可以并用：口头用约定单词，身体接触叠加手握式信号，因为胸口受压时完整单词常常喊不出来。</div>
+        </details>
+
+        <details class="faq-item">
+          <summary>体重较轻的一方被踩踏，力度表需要怎么调整？</summary>
+          <div class="faq-body">按接触面积重新算。体重轻的一方骨骼承压余量小，建议把全脚掌接触作为默认姿势，避免脚跟单点施压，并把每级停留缩短到 8 秒。10月29日一份单例记录显示，前脚掌 20 公斤在 30 秒内引发呼吸变浅，全脚掌 30 公斤反而更平稳，说明面积的影响大于总重量。</div>
+        </details>
+
+        <details class="faq-item">
+          <summary>事后安抚需要做多久？低强度也要做吗？</summary>
+          <div class="faq-body">建议预留 30 分钟，先补水和保暖，再做三句话复盘。10月28日至11月5日的 52 条评论中，有 9 条提到“事后一个人待着更难受”，其中 6 条场景强度并不高。强度低不代表影响低，安抚流程写进固定步骤比临时反应更可靠。</div>
+        </details>
+
+        <details class="faq-item">
+          <summary>跪姿训话环节，复述命令容易变成机械背诵怎么办？</summary>
+          <div class="faq-body">把复述拆成三段：第一段只复述称呼，第二段复述一句自我描述，第三段回答一个当场的具体问题。三段各限 20 秒，中间插入停顿。机械感的来源通常是句子太长，缩短句子比增加情绪词更有效。</div>
+        </details>
+      </section>
+
+      <!-- 9 用户评论 -->
+      <section class="block" id="comments" aria-labelledby="h-comments">
+        <h2 id="h-comments">用户评论：来自练习者的具体反馈</h2>
+        <p class="block-sub">含正面、中性、吐槽，均指向具体条目或动作</p>
+        <div class="comment-list">
+          <div class="comment">
+            <div class="avatar" aria-hidden="true">岚</div>
+            <div>
+              <div class="comment-head"><b>岚·夜班</b><span class="stars">★★★★★</span><span>11月6日</span></div>
+              <p>力度表 v3 加的地面系数很实用。之前一直在木地板上按二级压，对方说膝盖发麻，换成软垫后同样公斤数停留 40 秒都没问题。</p>
+            </div>
+          </div>
+          <div class="comment">
+            <div class="avatar g2" aria-hidden="true">灰</div>
+            <div>
+              <div class="comment-head"><b>灰阶练习者</b><span class="stars">★★★★☆</span><span>11月5日</span></div>
+              <p>四级表里 40 公斤以上那一档看着有点吓人，实际很少用到。真正需要的是二级到三级的过渡说明，这一段现在只有一句话，建议补细。</p>
+            </div>
+          </div>
+          <div class="comment">
+            <div class="avatar g3" aria-hidden="true">周</div>
+            <div>
+              <div class="comment-head"><b>周末档口</b><span class="stars">★★★☆☆</span><span>11月4日</span></div>
+              <p>中性说一句：训话脚本的三段式命令对慢性子不太友好，90 秒一轮节奏偏快，我按 120 秒改完舒服很多，希望脚本里注明可调。</p>
+            </div>
+          </div>
+          <div class="comment">
+            <div class="avatar g4" aria-hidden="true">桥</div>
+            <div>
+              <div class="comment-head"><b>桥下听雨</b><span class="stars">★★★★★</span><span>11月3日</span></div>
+              <p>物理信号那一条救了我。上个月胸口被压的时候根本喊不出词，只能拍垫子，现在开场会先说好拍三下就是停。</p>
+            </div>
+          </div>
+          <div class="comment">
+            <div class="avatar g5" aria-hidden="true">木</div>
+            <div>
+              <div class="comment-head"><b>木木不加糖</b><span class="stars">★★☆☆☆</span><span>11月2日</span></div>
+              <p>吐槽一下术语表，“复述命令”和“身份贬低”两个词条的解释几乎一样，看完还是分不清什么时候用哪个，希望加对比示例。</p>
+            </div>
+          </div>
+          <div class="comment">
+            <div class="avatar g3" aria-hidden="true">巡</div>
+            <div>
+              <div class="comment-head"><b>夜巡人</b><span class="stars">★★★★☆</span><span>10月31日</span></div>
+              <p>事后安抚流程的三句话复盘很好用。上周做完训话，对方说最不舒服的是那句提家人的玩笑，直接写进禁区表，下次就没再出现。</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 10 相关资讯 -->
+      <section class="block" id="news" aria-labelledby="h-news">
+        <h2 id="h-news">相关资讯：社区动态与数据记录</h2>
+        <p class="block-sub">只收录本周内可核对来源的条目</p>
+        <ul class="news-list">
+          <li><a href="/#analysis">11月7日力度表 v3 发布，新增地面材质系数与四级区间说明</a><time datetime="2026-11-07">11月7日</time></li>
+          <li><a href="/#faq">11月6日问答区补入“羞辱话术涉家人是否越界”，回答按风险分级</a><time datetime="2026-11-06">11月6日</time></li>
+          <li><a href="/#comments">11月4日置顶中性反馈：三级力度对体重较轻者偏重，建议改用脚掌分散受力</a><time datetime="2026-11-04">11月4日</time></li>
+          <li><a href="/#guide">11月3日安全词切换节点表上线，红绿灯升级条件写成可核对判断句</a><time datetime="2026-11-03">11月3日</time></li>
+          <li><a href="/#comments">10月31日 37 人小样本记录：口头安全词响应延迟 4.7 秒，物理信号 2.1 秒</a><time datetime="2026-10-31">10月31日</time></li>
+        </ul>
+      </section>
+
+      <!-- 11 相关推荐标签 -->
+      <section class="block" id="recommend" aria-labelledby="h-recommend">
+        <h2 id="h-recommend">相关推荐：按关键词直接找条目</h2>
+        <p class="block-sub">标签对应正文内的具体板块与条目</p>
+        <div class="tag-cloud">
+          <a href="/#guide">踩踏力度四级表</a>
+          <a href="/#faq">羞辱话术禁区清单</a>
+          <a href="/#guide">红绿灯安全词</a>
+          <a href="/#analysis">接触面积与压强</a>
+          <a href="/#guide">事后安抚三句话</a>
+          <a href="/#overview">跪姿训话脚本</a>
+          <a href="/#analysis">地面材质系数</a>
+          <a href="/#comments">物理退出信号</a>
+          <a href="/#compare">稳妥做法对照</a>
+          <a href="/#faq">开场五项确认</a>
+          <a href="/#overview">混合场景退出</a>
+          <a href="/#updates">身份贬低风险分级</a>
+        </div>
+      </section>
+
+      <!-- 12 榜单 + 可信度分层 -->
+      <section class="block" id="ranking" aria-labelledby="h-ranking">
+        <h2 id="h-ranking">练习条目热度榜与可信度分层</h2>
+        <p class="block-sub">热度按本周页内点击排序，可信度按信息来源分级</p>
+        <ol class="rank-list">
+          <li><span>踩踏力度四级表 v3</span><span class="meta">11月7日 · 修订</span></li>
+          <li><span>开场核对清单七项</span><span class="meta">10月28日 · 稳定</span></li>
+          <li><span>安全词切换节点表</span><span class="meta">11月3日 · 新增</span></li>
+          <li><span>事后安抚三句话复盘</span><span class="meta">10月31日 · 稳定</span></li>
+          <li><span>身体接触中的物理信号</span><span class="meta">11月4日 · 补充</span></li>
+        </ol>
+        <div class="badge-row">
+          <span class="badge"><b>A 级</b> 有日期、有样本量的记录</span>
+          <span class="badge"><b>B 级</b> 单例记录，仅作方向参考</span>
+          <span class="badge"><b>C 级</b> 个人转述，未经交叉核对</span>
+          <span class="badge"><b>推测</b> 无数据支撑的推断，单独标注</span>
+        </div>
+      </section>
+
+    </div>
+
+    <!-- 侧栏 -->
+    <aside class="side-col" aria-label="侧栏">
+
+      <div class="side-card side-nav">
+        <h2>本页栏目</h2>
+        <ul>
+          <li><a href="/#overview">领域概览</a></li>
+          <li><a href="/#picks">精选内容推荐</a></li>
+          <li><a href="/#updates">最新更新</a></li>
+          <li><a href="/#channels">分类入口</a></li>
+          <li><a href="/#analysis">深度解析</a></li>
+          <li><a href="/#guide">体验指南</a></li>
+          <li><a href="/#compare">做法对照</a></li>
+          <li><a href="/#faq">常见问题</a></li>
+          <li><a href="/#comments">用户评论</a></li>
+          <li><a href="/#news">相关资讯</a></li>
+          <li><a href="/#recommend">相关推荐</a></li>
+          <li><a href="/#ranking">热度榜与可信度</a></li>
+        </ul>
+      </div>
+
+      <div class="side-card term">
+        <h2>术语速查</h2>
+        <dl>
+          <dt>安全词</dt>
+          <dd>场景内约定用于叫停的单词，需避开日常用语，确保受压时也能发出。</dd>
+          <dt>红绿灯制</dt>
+          <dd>绿灯继续、黄灯降强度、红灯停止，升级必须由被压方主动说。</dd>
+          <dt>接触面积</dt>
+          <dd>脚掌与身体接触的范围，面积越大压强越低，与总重量同等重要。</dd>
+          <dt>事后安抚</dt>
+          <dd>场景结束后的补水、保暖与情绪复盘，通常预留 30 分钟。</dd>
+          <dt>复述命令</dt>
+          <dd>要求对方重复指定句子，用于语言层的压迫感构建，句子宜短。</dd>
+        </dl>
+      </div>
+
+      <div class="side-card">
+        <h2>本周可核对条目</h2>
+        <ul class="mini-list">
+          <li><a href="/#analysis">11月7日 力度表 v3 地面系数</a></li>
+          <li><a href="/#faq">11月6日 家人话题风险分级</a></li>
+          <li><a href="/#comments">11月4日 中性置顶反馈</a></li>
+          <li><a href="/#guide">11月3日 安全词切换节点表</a></li>
+          <li><a href="/#comments">10月31日 37 人响应延迟记录</a></li>
+        </ul>
+      </div>
+
+      <div class="side-card side-cta">
+        <h2>练习前先核对</h2>
+        <p>五项口头确认：身体禁区、力度上限、安全词、物理信号、退出后联系方式。写完再开始。</p>
+        <a class="btn" href="/#guide">打开体验指南</a>
+      </div>
+
+    </aside>
+  </div>
+</main>
+
+<!-- ===== 页尾 ===== -->
+<footer class="site-footer" aria-label="页尾">
+  <div class="footer-main">
+    <div class="footer-brand">
+      <svg width="40" height="40" viewBox="0 0 64 64" role="img" aria-label="王冠标志">
+        <rect width="64" height="64" rx="14" fill="#3a1429"/>
+        <path d="M32 9 L37.6 22.4 L52 23.4 L41.2 32.4 L45.6 46.4 L32 38.6 L18.4 46.4 L22.8 32.4 L12 23.4 L26.4 22.4 Z" fill="#d4a24c"/>
+      </svg>
+      <div class="fname">女王羞辱踩踏</div>
+      <p>把支配场景拆成话术、力度、退出与安抚四段，每段都留可核对的数字与停下的位置。</p>
+    </div>
+    <div class="footer-col">
+      <h3>动作与话术</h3>
+      <ul>
+        <li><a href="/#overview">羞辱话术分级</a></li>
+        <li><a href="/#guide">跪姿训话脚本</a></li>
+        <li><a href="/#guide">复述命令练习</a></li>
+        <li><a href="/#compare">稳妥做法对照</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h3>安全与边界</h3>
+      <ul>
+        <li><a href="/#guide">踩踏力度四级表</a></li>
+        <li><a href="/#faq">安全词与物理信号</a></li>
+        <li><a href="/#guide">开场五项确认</a></li>
+        <li><a href="/#ranking">可信度分层说明</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h3>记录与社区</h3>
+      <ul>
+        <li><a href="/#updates">本周更新</a></li>
+        <li><a href="/#comments">练习者反馈</a></li>
+        <li><a href="/#news">社区动态</a></li>
+        <li><a href="/#recommend">相关推荐标签</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-note">
+    <p>说明：页内条目、评论账号与部分数据为示例内容，用于展示结构；引用日期集中在 2026年10月28日至11月7日之间，可对照正文更新列表核对。涉及身体的动作请以双方当场确认为准。</p>
+    <p>本站内容仅面向成年人，不构成医疗或法律建议。页面更新时间：2026年11月8日，对应正文「最新更新」板块中的修订项。</p>
+    <div class="copy">
+      <span>© 2026 女王羞辱踩踏 · 主题资料整理</span>
+      <span>成年向内容 · 安全优先</span>
+    </div>
+  </div>
+</footer>
+
+<button class="back-top" id="backTop" aria-label="回到顶部" title="回到顶部">↑</button>
+
+<script>
+(function(){
+  "use strict";
+
+  /* 移动端菜单 */
+  var menuToggle = document.getElementById('menuToggle');
+  var mainNav = document.getElementById('mainNav');
+  if (menuToggle && mainNav) {
+    menuToggle.addEventListener('click', function(){
+      var open = mainNav.classList.toggle('open');
+      menuToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+      menuToggle.textContent = open ? '收起' : '菜单';
+    });
+    mainNav.addEventListener('click', function(e){
+      if (e.target.tagName === 'A' && mainNav.classList.contains('open')) {
+        mainNav.classList.remove('open');
+        menuToggle.setAttribute('aria-expanded','false');
+        menuToggle.textContent = '菜单';
+      }
+    });
+  }
+
+  /* 站内本地搜索 */
+  var input = document.getElementById('siteSearch');
+  var resultBox = document.getElementById('searchResult');
+  var indexData = [
+    {t:'踩踏力度四级表 v3', id:'guide', k:'力度 四级 公斤 地面 系数 踩踏'},
+    {t:'羞辱话术禁区清单', id:'faq', k:'话术 羞辱 禁区 家人 风险'},
+    {t:'红绿灯安全词切换节点表', id:'guide', k:'安全词 红绿灯 黄灯 切换 退出'},
+    {t:'接触面积与压强', id:'analysis', k:'面积 压强 脚掌 脚跟 受力'},
+    {t:'事后安抚三句话复盘', id:'comments', k:'事后 安抚 复盘 温水 毛毯'},
+    {t:'跪姿训话脚本', id:'picks', k:'跪姿 训话 复述 命令 脚本'},
+    {t:'地面材质系数', id:'analysis', k:'地面 软垫 硬地 木地板 系数'},
+    {t:'物理退出信号', id:'comments', k:'物理 信号 拍垫子 脚踝 退出'},
+    {t:'开场核对清单七项', id:'guide', k:'开场 核对 清单 确认 禁区'},
+    {t:'安全词响应延迟记录', id:'news', k:'响应 延迟 秒 样本 记录'},
+    {t:'热度榜与可信度分层', id:'ranking', k:'榜单 热度 可信度 A级 B级'},
+    {t:'术语速查表', id:'overview', k:'术语 安全词 红绿灯 接触面积'}
+  ];
+
+  function runSearch(q){
+    q = q.trim().toLowerCase();
+    if (!q) { resultBox.classList.remove('show'); resultBox.innerHTML=''; return; }
+    var hits = indexData.filter(function(item){
+      return item.t.toLowerCase().indexOf(q) > -1 || item.k.toLowerCase().indexOf(q) > -1;
+    });
+    if (hits.length === 0) {
+      resultBox.innerHTML = '<div class="search-empty">没有找到匹配条目。试试“力度”“安全词”“安抚”“话术”。</div>';
+    } else {
+      resultBox.innerHTML = hits.map(function(item){
+        return '<a role="option" href="/#' + item.id + '">' + item.t + '</a>';
+      }).join('');
+    }
+    resultBox.classList.add('show');
+  }
+
+  if (input && resultBox) {
+    input.addEventListener('input', function(){ runSearch(input.value); });
+    input.addEventListener('keydown', function(e){
+      if (e.key === 'Enter') { e.preventDefault(); runSearch(input.value); }
+      if (e.key === 'Escape') { resultBox.classList.remove('show'); input.blur(); }
+    });
+    document.addEventListener('click', function(e){
+      if (!resultBox.contains(e.target) && e.target !== input) {
+        resultBox.classList.remove('show');
+      }
+    });
+  }
+
+  /* 滚动高亮 + 回到顶部 */
+  var backTop = document.getElementById('backTop');
+  var sideLinks = Array.prototype.slice.call(document.querySelectorAll('.side-nav a'));
+  var sections = Array.prototype.slice.call(document.querySelectorAll('main section[id], .content-col section[id]'));
+
+  function onScroll(){
+    var y = window.scrollY || window.pageYOffset;
+    if (backTop) {
+      if (y > 520) backTop.classList.add('show');
+      else backTop.classList.remove('show');
+    }
+    var current = '';
+    var probe = 140;
+    sections.forEach(function(sec){
+      var top = sec.getBoundingClientRect().top + y - probe;
+      if (y >= top) current = sec.id;
+    });
+    sideLinks.forEach(function(a){
+      var target = a.getAttribute('href').replace('/#','');
+      if (target === current) a.classList.add('highlight');
+      else a.classList.remove('highlight');
+    });
+  }
+
+  window.addEventListener('scroll', onScroll, {passive:true});
+  window.addEventListener('resize', onScroll);
+  onScroll();
+
+  if (backTop) {
+    backTop.addEventListener('click', function(){
+      window.scrollTo({top:0, behavior:'smooth'});
+    });
+  }
+})();
+</script>
+</body>
+                </html>
